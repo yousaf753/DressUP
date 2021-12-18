@@ -1,0 +1,622 @@
+{
+  "cap": [
+    {
+      "name": "BALLY",
+      "image": "assets/images/Cap/Cap1.png",
+      "price": "1000",
+      "description": " Bally boasts of their expertise in crafting the nicest leather and this cap enables you to experience it."
+    },
+    {
+      "name": "Baseball Cap",
+      "image": "assets/images/Cap/Cap2.png",
+      "price": "1200",
+      "description": "It creates a sheen in the entire cap and a very discreet Prada Milano trademark sits on the crest in black embroidery."
+    },
+    {
+      "name": "VALENTINO",
+      "image": "assets/images/Cap/Cap3.png",
+      "price": "1500",
+      "description": "It looks like a team from the major soccer league got a major merch upgrade, one that’s way more fashionable and says Valentino."
+    },
+    {
+      "name": "Blend Canvas",
+      "image": "assets/images/Cap/Cap4.png",
+      "price": "2000",
+      "description": "In a style similar to their double G logo accessories, this logo-print Gucci cap shows brand support like no other. "
+    },
+    {
+      "name": "GCDS",
+      "image": "assets/images/Cap/Cap5.png",
+      "price": "1100",
+      "description": "In this chaotic world, we’d be happy with a little bit of peace and camaraderie. Nothing models it like our distant neighbor on the other side of the Pacific."
+    },
+    {
+      "name": "GIVENCHY",
+      "image": "assets/images/Cap/Cap6.png",
+      "price": "1600",
+      "description": "This Givenchy snapback adds in leather and mesh to that equation to result in a fresh hair and cap that’s the complete opposite of icky."
+    },
+    {
+      "name": "DOLCE",
+      "image": "assets/images/Cap/Cap7.png",
+      "price": "2000",
+      "description": "Italy is home to the high-quality goods that made Dolce & Gabbana the luxury brand that they are today."
+    },
+    {
+      "name": "BALENCIAGA",
+      "image": "assets/images/Cap/Cap8.png",
+      "price": "2500",
+      "description": "White baseball caps might as well be following in the steps of white sneakers as they inch their way towards mainstream popularity both in and out of the fashion world."
+    },
+    {
+      "name": "DSQUARED",
+      "image": "assets/images/Cap/Cap9.png",
+      "price": "1500",
+      "description": "Fashion loves twins, and we do too especially when it brings out items like this Dsquared2 cap with their embroidered logo on the front and the Caten twins’ names at the back in matching white font"
+    },
+    {
+      "name": "LORO PIANA Storm",
+      "image": "assets/images/Cap/Cap10.png",
+      "price": "1800",
+      "description": "This cap may seem the same to you as all the other black baseball caps but it’s actually a lot different and in some ways, better. It’s made with one of Loro Piana Storm System"
+    }
+  ],
+  "coatpant": [
+    {
+      "name": "Slim Fit Suit",
+      "image": "assets/images/CoatPant/CoatPant1.png",
+      "price": "20000",
+      "description": "This type of suit for men gets you a stylish, form-fitting style suit that’s narrow at the chest and waist, but not to the point of constricting blood flow."
+    },
+    {
+      "name": "Classic Fit Suit",
+      "image": "assets/images/CoatPant/CoatPant2.png",
+      "price": "15000",
+      "description": "This type of suit for men is comfortable in feel and unfettered in design, this suit style provides breathability without resorting to a loose or unkempt aesthetic–they don’t call it “classic” for nothing."
+    },
+    {
+      "name": "Modern Fit Suit",
+      "image": "assets/images/CoatPant/CoatPant3.png",
+      "price": "22000",
+      "description": " These types of suits for men hover squarely in the realm between slim fit and a classic fit. It thereby delivers a tight look with breathing room to spare."
+    },
+    {
+      "name": "Notch Lapel",
+      "image": "assets/images/CoatPant/CoatPant4.png",
+      "price": "23000",
+      "description": "A mainstay on single-breasted jackets, and arguably the most common type of suit lapel, the notch lapel is defined by a visible indent at the spot where the collar meets the lapel. "
+    },
+    {
+      "name": "Shawl Lapel",
+      "image": "assets/images/CoatPant/CoatPant5.png",
+      "price": "13000",
+      "description": "One look at a shawl lapel and its smooth, uninterrupted lining, and you’re already picturing an elegant black-tie affair. That’s because this type of suit lapel is more or less exclusively found on formal wear like tuxedos and fancy dinner jackets"
+    },
+    {
+      "name": "Peak Lapel",
+      "image": "assets/images/CoatPant/CoatPant6.png",
+      "price": "15000",
+      "description": "A stylish upgrade to the notch lapel, the peak lapel has the top lapel edges facing upward at sharp angles immediately below the collar. It’s most commonly found on double-breasted suits and thereby a frequent player at formal events"
+    },
+    {
+      "name": "Single Breasted Suit",
+      "image": "assets/images/CoatPant/CoatPant7.png",
+      "price": "25000",
+      "description": "Among types of men’s suits, the single-breasted suit is the most ubiquitous. The easiest way to spot one is to look for the inclusion of either one, two or three buttons along the seam, or just observe what about 99% of professional men wear to work to every day"
+    },
+    {
+      "name": "Double Breasted Suit",
+      "image": "assets/images/CoatPant/CoatPant8.png",
+      "price": "30000",
+      "description": "In contrast to the single-breasted type of men’s suit, the double-breasted suit includes additional buttons on either side of the jacket for aesthetic purposes."
+    },
+    {
+      "name": "Unstructured Blazer",
+      "image": "assets/images/CoatPant/CoatPant9.png",
+      "price": "22000",
+      "description": "Some men think interior padding and stylish blazers are invariably part of the same package. However, the men’s unstructured blazer is here to change such preconceived notions."
+    },
+    {
+      "name": "Patch Pocket Blazer",
+      "image": "assets/images/CoatPant/CoatPant10.png",
+      "price": "20000",
+      "description": "A patch pocket is one that’s been made from a separate piece of cloth and then sewn on to the outside of your sports jacket or blazer. Like the unstructured blazer, patch pockets are a great way to join casual style with personal flair"
+    }
+  ],
+  "glasses": [
+    {
+      "name": "Full-Rimmed",
+      "image": "assets/images/Glasses/Glasses1.png",
+      "price": "1000",
+      "description": "As the name suggests, full-rimmed glasses have rims around the full circumference of the lenses"
+    },
+    {
+      "name": "Rimless",
+      "image": "assets/images/Glasses/Glasses2.png",
+      "price": "2000",
+      "description": "For a more subtle look, you may prefer rimless frames. They have no rims around the lenses. Instead, the temples and the nose bridge connect directly to the lenses themselves."
+    },
+    {
+      "name": "Semi-Rimless",
+      "image": "assets/images/Glasses/Glasses3.png",
+      "price": "1500",
+      "description": "This style tends to combine the benefits of the two above types. They are a little bolder and have some added personality."
+    },
+    {
+      "name": "Low Bridge",
+      "image": "assets/images/Glasses/Glasses4.png",
+      "price": "1800",
+      "description": "Low bridge frames can be full-rimmed, rimless or semi-rimless. Although, it is common to find more full-rimmed glasses with this feature."
+    },
+    {
+      "name": "Wire Eyeglass",
+      "image": "assets/images/Glasses/Glasses5.png",
+      "price": "1000",
+      "description": "These minimalist frames are only available in metal (hence the name). Thus, the material and color options are a little limited. Nonetheless, these can be stylish, elegant glasses."
+    },
+    {
+      "name": "Acetate Eyeglass",
+      "image": "assets/images/Glasses/Glasses6.png",
+      "price": "2000",
+      "description": "Acetate is a material that turns natural fibers into a type of plastic. In many ways, this material is very similar to plastic in terms of its glasses frame characteristics."
+    },
+    {
+      "name": "Wood Texture",
+      "image": "assets/images/Glasses/Glasses7.png",
+      "price": "2500",
+      "description": "Typically, this is achieved with acetate, but plastic may also be used. These glasses may be available in light, dark and black colors and designs replicating a variety of types of woods."
+    },
+    {
+      "name": "Titanium Eyeglass ",
+      "image": "assets/images/Glasses/Glasses8.png",
+      "price": "2000",
+      "description": "Typically, titanium frames are a little more expensive than some other options. Nonetheless, they tend to last thanks to their durability. "
+    },
+    {
+      "name": "Oval Glasses",
+      "image": "assets/images/Glasses/Glasses9.png",
+      "price": "1000",
+      "description": "Oval glasses are very popular and can be used for a fashionable look or something a little more low-key and timeless."
+    },
+    {
+      "name": "Horn Glasses",
+      "image": "assets/images/Glasses/Glasses10.png",
+      "price": "1500",
+      "description": "This shape looks best on people with oval or rectangular faces. However, they can work for just about everybody. "
+    }
+  ],
+  "kurta": [
+    {
+      "name": "Cotton Kurta",
+      "image": "assets/images/Kurta/Kurta1.png",
+      "price": "5000",
+      "description": "The kurta is made with comfortable cotton in an Indo-wester pattern, while the loose, frilly salwar is made with polyester. Just slip into this set and get ready to earn tons of compliments!"
+    },
+    {
+      "name": "Asymmetrical Kurta",
+      "image": "assets/images/Kurta/Kurta2.png",
+      "price": "3000",
+      "description": "This cowl hemline kurta is a subtle blend of traditions and modernity. The cotton kurta features a draped hemline that adds a sense of class and style to your outfit. "
+    },
+    {
+      "name": "Plus Size Casual Kurta",
+      "image": "assets/images/Kurta/Kurta3.png",
+      "price": "4000",
+      "description": "Being plus-sized doesn’t mean you comprise in your style! There are plenty of outfit options for you which can enhance your shape and hide that bulk."
+    },
+    {
+      "name": "Denim Kurta",
+      "image": "assets/images/Kurta/Kurta4.png",
+      "price": "3500",
+      "description": "This blue kurta takes your love for denim to a whole new level! The rugged denim fabric is converted into an aesthetic Indian ethnic wear outfit by adorning it with paisley prints. "
+    },
+    {
+      "name": "Floral Print High Low Kurta",
+      "image": "assets/images/Kurta/Kurta5.png",
+      "price": "5000",
+      "description": "Looking for an outfit that acts as an extension of your unique personality? Check out this blue floral printed kurta! The unusual colour combination, design and cut of this outfit."
+    },
+    {
+      "name": "Manish Malhotra Kurta",
+      "image": "assets/images/Kurta/Kurta6.png",
+      "price": "8000",
+      "description": "Talking of Men’s kurtas, how can one not mention Manish Malhotra! This leading Indian designer label has become synonymous to class and matchless elegance. "
+    },
+    {
+      "name": "Bandhani Kurta",
+      "image": "assets/images/Kurta/Kurta7.png",
+      "price": "10000",
+      "description": "Try a desi boy look with this timeless red Bandhani men’s kurta. The pure cotton fabric is dyed using Bandhani technique to attain these bright coloured squares all over."
+    },
+    {
+      "name": "Woolen Checks Kurta",
+      "image": "assets/images/Kurta/Kurta8.png",
+      "price": "7000",
+      "description": "This woolen Kurta is perfect for winter weddings! The warm and cosy feeling of this outfit makes you want to dance, despite the chilly weather outside. "
+    },
+    {
+      "name": "Indo Western Kurta",
+      "image": "assets/images/Kurta/Kurta9.png",
+      "price": "5000",
+      "description": "Woo, the crowd with this stunning Indo-Western Angrakha kurta. The celebrity inspired kurta for men is just what you want to get hog the limelight. "
+    },
+    {
+      "name": "Jompers Party Wear Kurta",
+      "image": "assets/images/Kurta/Kurta10.png",
+      "price": "9000",
+      "description": "This Silk Kurta for men is an instant attention grabber! The mysterious combination of silver and black enhances your complexion and make you the star of the night."
+    }
+  ],
+  "pant": [
+    {
+      "name": "CORDUROY",
+      "image": "assets/images/Pant/Pant1.png",
+      "price": "5000",
+      "description": "Contrary to its sometimes stuffy connotations, corduroy is brilliant when dressed down and worn casually."
+    },
+    {
+      "name": "WOOL",
+      "image": "assets/images/Pant/Pant2.png",
+      "price": "4000",
+      "description": "Perfect both for styling with other tailored separates or smartening a casual getup, the wool trouser has been a mainstay amongst industry insiders for years – and their popularity isn’t showing any signs of waning."
+    },
+    {
+      "name": "TWILL CHINOS",
+      "image": "assets/images/Pant/Pant3.png",
+      "price": "5000",
+      "description": "A good piece of workwear puts in a shift if you want to assert your old-school masculine credentials. In twill chinos, quality craftsmanship meets reliability and style in a perfect ménage à trews of cool that’s still exceptionally wearable."
+    },
+    {
+      "name": "RELAXED-LEGGED",
+      "image": "assets/images/Pant/Pant4.png",
+      "price": "3000",
+      "description": "When it comes to styling, contrast the extra fabric below by keeping your top half fitted to avoid any accusations that you’ve been playing dress up in your dad’s wardrobe."
+    },
+    {
+      "name": "LINEN",
+      "image": "assets/images/Pant/Pant5.png",
+      "price": "5500",
+      "description": "linen blends make them a lot more practical, less prone to impossible creases – while still being as breezy as ever."
+    },
+    {
+      "name": " DRAWSTRING",
+      "image": "assets/images/Pant/Pant6.png",
+      "price": "3500",
+      "description": "Once you’ve felt how comfortable your dressed-up wardrobe can be, you’ll never go back."
+    },
+    {
+      "name": "SLIMLINE JOGGERS",
+      "image": "assets/images/Pant/Pant7.png",
+      "price": "3000",
+      "description": "There have been some excellent hybrids over the years: the shacket, the snood, er, Kimye, but none boast as much staying power as athleisure, which is a rare example of fashion and function joining forces for the greater good."
+    },
+    {
+      "name": "CROPPED",
+      "image": "assets/images/Pant/Pant8.png",
+      "price": "5000",
+      "description": "In addition to giving your footwear a platform to shine, a precise crop accentuates the line of your trews – because there’s nothing worse than puddling material at the bottom of your ankle."
+    },
+    {
+      "name": "CARGO PANTS",
+      "image": "assets/images/Pant/Pant9.png",
+      "price": "4000",
+      "description": "Standard-issue khaki green pairs well with just about anything in navy so consider an overshirt (another workwear workhorse) for a weekend look that grafts."
+    },
+    {
+      "name": "HIGH-WAISTED ",
+      "image": "assets/images/Pant/Pant10.png",
+      "price": "3000",
+      "description": "Today, however, it’s much more likely to signify that you’re the type of gent who frequents Pitti Uomo and owns more than one set of cufflinks. High-waisted trousers are quite literally on the rise. "
+    }
+  ],
+  "sherwani": [
+    {
+      "name": "Wedding Sherwani",
+      "image": "assets/images/Sherwani/Sherwani1.png",
+      "price": "15000",
+      "description": "Check out this stunner from Anita Dongre. The navy blue sherwani is an eclectic mix of the traditions and modernity. It comes with a unique tiger print, which brings out the royalty in you"
+    },
+    {
+      "name": "Manyavar Sherwani",
+      "image": "assets/images/Sherwani/Sherwani2.png",
+      "price": "10000",
+      "description": "Manyavar is renowned for making some of the best Sherwanis for men. Here is one such piece tailor-made for a handsome groom."
+    },
+    {
+      "name": "Jodhpuri Sherwani",
+      "image": "assets/images/Sherwani/Sherwani3.png",
+      "price": "13000",
+      "description": "This black Sherwani takes back into the gone-by era with its design and styling. The classic Jodhpuri Sherwani is made with a texture jacquard fabric and highlighted with glossy black buttons."
+    },
+    {
+      "name": "Indo Western Sherwani",
+      "image": "assets/images/Sherwani/Sherwani4.png",
+      "price": "12000",
+      "description": "This peach colour Indo western sherwani design for men who love to experiment. The asymmetric Kurta is structured with a layered effect, using a combination of plain and textured fabrics."
+    },
+    {
+      "name": " Designer Sherwani",
+      "image": "assets/images/Sherwani/Sherwani5.png",
+      "price": "10000",
+      "description": "Nothing can bring out the radiance in you as gold does! Here are one such latest wedding Sherwani designs for groom which is ideal for the D-day. "
+    },
+    {
+      "name": "Pakistani Sherwani",
+      "image": "assets/images/Sherwani/Sherwani6.png",
+      "price": "14000",
+      "description": "Look imperial in this Brown Brocade Sherwani. The traditional Pakistani style Sherwani is converted into celebration wear by adding hints of embroidery on the cuffs and collar. "
+    },
+    {
+      "name": "Punjabi Sherwani",
+      "image": "assets/images/Sherwani/Sherwani7.png",
+      "price": "10000",
+      "description": "It’s time to show your Bhangra moves in this Sherwani. The beige and golden-brown outfit is just what you need on a long dancing night. It is the best pick for Sangeeth, as the loose Punjabi Patiala can keep your airy and comfortable."
+    },
+    {
+      "name": "Party Wear Sherwani",
+      "image": "assets/images/Sherwani/Sherwani8.png",
+      "price": "80000",
+      "description": "Parties are good reasons to dress up and look your best. This pale green outfit is one such design, which truly lives up to the term “party wear”."
+    },
+    {
+      "name": " Bridegroom Sherwani",
+      "image": "assets/images/Sherwani/Sherwani9.png",
+      "price": "15000",
+      "description": "Pamper yourself on the best day of your life, with this lavish outfit, The wine colour Sherwani is made with fine Velvet material for a soft feel and touch. The weave looks like a quilted work, which is further accentuated with silver Zardosi motifs."
+    },
+    {
+      "name": "Short Sherwani",
+      "image": "assets/images/Sherwani/Sherwani10.png",
+      "price": "10000",
+      "description": "This handwoven white Sherwani is designed in a short length model to create the illusion of a lengthy figure. This Sherwani made with a brocade material; the traditional Turkish art inspires the motifs on it."
+    }
+  ],
+  "shirt": [
+    {
+      "name": "Cotton Shirts",
+      "image": "assets/images/Shirt/Shirt1.png",
+      "price": "3000",
+      "description": "With the humid summers just around the corner, this shirt makes for an ideal pick! The peach coloured shirt with white wrist lining gives you a soothing look."
+    },
+    {
+      "name": "Grey Silk Shirt",
+      "image": "assets/images/Shirt/Shirt2.png",
+      "price": "2000",
+      "description": "To all the Bold and confident men, this is a final calling! Check out this abstract print silk shirt for men, which looks sensational. The shirt has a luxurious look and feel to it and fits your body like a dream."
+    },
+    {
+      "name": "Fancy Shirts",
+      "image": "assets/images/Shirt/Shirt3.png",
+      "price": "3500",
+      "description": "When it comes to the upper wear segment, there is simply no limit to creativity. This fancy colour-blocked shirt is all you need to stand apart from the crowd. "
+    },
+    {
+      "name": "Flannel Shirt",
+      "image": "assets/images/Shirt/Shirt4.png",
+      "price": "3000",
+      "description": "Flannel shirts are true classic men’s outfits. They are known for their comfort and style. This blue flannel shirt is made with cotton to you a smooth finish and superior feel."
+    },
+    {
+      "name": "Collarless Shirts",
+      "image": "assets/images/Shirt/Shirt5.png",
+      "price": "2500",
+      "description": "Get the “cool-dude-next-door” look with this white collarless shirt for men. The shirt has pinstripes on it, which can give a slim and taller look."
+    },
+    {
+      "name": "Summer Shirt",
+      "image": "assets/images/Shirt/Shirt6.png",
+      "price": "4000",
+      "description": "Aloha! Welcome to the Hawaiian Summer vacation with this beautiful printed shirt. The design makes it ideal for beach holidays to enjoy a comfortable time under the sun!"
+    },
+    {
+      "name": " Designer Shirts",
+      "image": "assets/images/Shirt/Shirt7.png",
+      "price": "5000",
+      "description": "Check out this collection of amazing Designer shirts for men! The classic slim-fit shirt is given a modern twist with the stylised button placket and asymmetric design. "
+    },
+    {
+      "name": "Long Shirts",
+      "image": "assets/images/Shirt/Shirt8.png",
+      "price": "2000",
+      "description": "Long shirts are ideal for men with tall bodies and defined frames. This latest gent’s shirt with kurta type can make you look sensational. "
+    },
+    {
+      "name": "Floral Shirts",
+      "image": "assets/images/Shirt/Shirt9.png",
+      "price": "3000",
+      "description": "If you thought Floral shirts are just for women, you are mistaken! These vibrant floral shirts are creating a wave in the Men’s fashion world."
+    },
+    {
+      "name": "Party Shirts",
+      "image": "assets/images/Shirt/Shirt10.png",
+      "price": "3500",
+      "description": "Those who work hard deserve to party hard! And when you do it, do it in the best of your style! Wear this blue partywear shirt with a stylish flower print on the chest sleeve and bottom."
+    }
+  ],
+  "shoes": [
+    {
+      "name": "Lee Cooper",
+      "image": "assets/images/Shoes/Shoes1.png",
+      "price": "7000",
+      "description": "If you do not want to compromise in any way for having the perfect looking branded and comfortable brogues, these Lee Cooper wingtip slip-on formal shoes are perfect."
+    },
+    {
+      "name": "Louis Philippe",
+      "image": "assets/images/Shoes/Shoes2.png",
+      "price": "13000",
+      "description": "Well, while black has always been in trend, we even have burgundy colour brogues for those men who prefer chic and youthful style statements."
+    },
+    {
+      "name": "Brogue Loafers",
+      "image": "assets/images/Shoes/Shoes3.png",
+      "price": "10000",
+      "description": "You can even have many informal looking and yet mesmerizing eye-catchy brogues, and here is one such. These gold-coloured brogue loafers are a budget variant for those men who want a regular look variety."
+    },
+    {
+      "name": "Formal Oxford",
+      "image": "assets/images/Shoes/Shoes4.png",
+      "price": "15000",
+      "description": "The oxford formal brogue shoes are among the most popular men’s formal wear ranges. With a business and plush lifestyle look, these come with a lace-up variant and tan brown colour. "
+    },
+    {
+      "name": " Tape Brogues",
+      "image": "assets/images/Shoes/Shoes5.png",
+      "price": "20000",
+      "description": "Red tape is another acclaimed brand known for footwear style variants. This brown colour full brogues for men comes with a regular look and lace-up detail, with a textured pattern."
+    },
+    {
+      "name": "Bata Lace Up",
+      "image": "assets/images/Shoes/Shoes6.png",
+      "price": "18000",
+      "description": "We even have another common and budget-friendly brogue shoe from the brand Bata. Their lace-up variant is ideal for men across age groups and is quite versatile."
+    },
+    {
+      "name": "Casual Clarks",
+      "image": "assets/images/Shoes/Shoes7.png",
+      "price": "15000",
+      "description": "If you are a fashionista from within and do not want to settle for any less, even for casual and regular wear or outings, these slip-on brogues can be a perfect choice."
+    },
+    {
+      "name": "Round Toe",
+      "image": "assets/images/Shoes/Shoes8.png",
+      "price": "12000",
+      "description": "These full-length long wing suede brogues with round toes are perfect for that unconventional yet unique and mesmerizing look."
+    },
+    {
+      "name": " Italian Leather",
+      "image": "assets/images/Shoes/Shoes9.png",
+      "price": "8000",
+      "description": "Men are so conscious about choosing their pair of shoes to buckle up their attitude. As desired by them, this pair of the stunning model of men’s Brogues are highly recommended for formal usage."
+    },
+    {
+      "name": "Beautiful Half",
+      "image": "assets/images/Shoes/Shoes10.png",
+      "price": "10000",
+      "description": "Discover the beauty of these half Brogues for the people who wish to wear such kind of half tweed brogues."
+    }
+  ],
+  "watch": [
+    {
+      "name": "Jaeger-LeCoultre",
+      "image": "assets/images/Watch/Watch1.png",
+      "price": "8000",
+      "description": "Established in 1833 in the Swiss Jura Mountains, Jaeger-LeCoultre is known for its clever designs. One of its most notable—and coveted—styles, the Reverso, features a face that flips over to protect itself within the watch casing."
+    },
+    {
+      "name": "Audemars Piguet",
+      "image": "assets/images/Watch/Watch2.png",
+      "price": "15000",
+      "description": "Founded by childhood friends Jules-Louis Audemars and Edward-Auguste Piguet in 1875, Audemars Piguet is perhaps most famous for its Royal Oak collection, which, since its debut in 1972, has become an obligatory status symbol for every A-lister from hip hop legends to elite athletes. Now it has some competition: In 2019, the brand released a new collection, Code 11.59."
+    },
+    {
+      "name": "Frédérique Constant",
+      "image": "assets/images/Watch/Watch3.png",
+      "price": "10000",
+      "description": "Founded in 1988 by Dutch couple Peter Stas and Aletta Stas-Bax, Frédérique Constant's mission statement is to craft fine luxury watches using Swiss techniques but sold at a relatively accessible price point."
+    },
+    {
+      "name": "Piaget",
+      "image": "assets/images/Watch/Watch4.png",
+      "price": "4000",
+      "description": "Georges-Édouard Piaget set up his first workshop on his family farm in the village of La Côte-aux-Fées in the Swiss mountains in 1874, launching the brand that is now famous for offering the thinnest automatic watch in the world."
+    },
+    {
+      "name": "Cartier",
+      "image": "assets/images/Watch/Watch5.png",
+      "price": "5000",
+      "description": "Louis-François Cartier founded the jewelry brand in Paris in 1847. Seventy years later, his grandson Louis Cartier invented the famous Tank Watch, which was modeled after a military tank. Several iconic watch models have followed since, including this Baignoire Allongée."
+    },
+    {
+      "name": "Harry Winston",
+      "image": "assets/images/Watch/Watch6.png",
+      "price": "7000",
+      "description": "Jeweler Harry Winston is relatively new to the watch game compared to other longer established brands out of Europe. Nevertheless, the same spirit of innovation that drives the brand's fantastical gems also applies to its timepieces. Take this avant-garde creation, the latest to join the Project Z collection—only 300 of them were made."
+    },
+    {
+      "name": "Blancpain",
+      "image": "assets/images/Watch/Watch7.png",
+      "price": "8000",
+      "description": "Founded in 1735, Blancpain enjoys the esteemed distinction of being the oldest surviving watch brand in the world. In the 1950s, it introduced the Fifty Fathoms diving watches, which were crafted in collaboration with the French Navy's combat swimmers and soon became the standard issue of the US Navy SEALs."
+    },
+    {
+      "name": "Longines",
+      "image": "assets/images/Watch/Watch8.png",
+      "price": "20000",
+      "description": "Longines was founded in 1832 by Auguste Agassiz and two partners in Saint-Imier, Switzerland, where the company is still headquartered. Its iconic winged hourglass logo is the oldest logo of its kind still being used in its original form."
+    },
+    {
+      "name": "Zenith",
+      "image": "assets/images/Watch/Watch9.png",
+      "price": "15000",
+      "description": "Georges Favre-Jacot was just 22 when he founded his eponymous watch company in 1865, eventually renaming it Zenith. In the century and half since, the brand has amassed a number of high profile wearers, including Mahatma Gandhi."
+    },
+    {
+      "name": "Tudor",
+      "image": "assets/images/Watch/Watch10.png",
+      "price": "10000",
+      "description": "If you think Tudor watches look like Rolexes, you're not seeing things: the brand is a subsidiary of the luxury watch giant and its timepieces are especially perfect for those who want the look and feel of a Rolex—without the high price tag."
+    }
+  ],
+  "winterjacket": [
+    {
+      "name": "Highlander Solid",
+      "image": "assets/images/WinterJacket/WinterJacket1.png",
+      "price": "5000",
+      "description": "With trendy solid burgundy red shade, zip pockets and mock collar, this leather jacket for men looks stylish and supreme in the sense of its elegance and class. "
+    },
+    {
+      "name": "Men’s Lapel Collar",
+      "image": "assets/images/WinterJacket/WinterJacket2.png",
+      "price": "8000",
+      "description": "You may even want to see new experimental trends of pairing jackets with formal or semiformal looks. Are you wondering how? Here is one such example. "
+    },
+    {
+      "name": "SELECTED",
+      "image": "assets/images/WinterJacket/WinterJacket3.png",
+      "price": "10000",
+      "description": "Have you ever heard of the brand SELECTED? This expensive high-end designer wear brand has come up with the latest launch of the grey jacket, for those men who are always in search of something new and trendy."
+    },
+    {
+      "name": "Paneled Leather ",
+      "image": "assets/images/WinterJacket/WinterJacket4.png",
+      "price": "7000",
+      "description": "If you want a rough and smart contemporary feel, this textured panelled brown leather jacket may be the right choice. With zip closure, button closure near the neck, and panels around the side, the entire look of the piece looks trendy and unique."
+    },
+    {
+      "name": "Solid Designer ",
+      "image": "assets/images/WinterJacket/WinterJacket5.png",
+      "price": "5000",
+      "description": "Have you ever come across a jacket with patchworks, tabs and detailing in men’s range? This all-new Strop brand’s leather jacket looks no less than a designer wear piece."
+    },
+    {
+      "name": "Striped Leather Jacket",
+      "image": "assets/images/WinterJacket/WinterJacket6.png",
+      "price": "8000",
+      "description": "Do you know there are contemporary and comfortable light wear leather jackets too? Especially for those fun-loving men, who love easy yet edgy looks, here is the one. "
+    },
+    {
+      "name": "Reversible Leather Jacket",
+      "image": "assets/images/WinterJacket/WinterJacket7.png",
+      "price": "6000",
+      "description": "If you love multi-purpose and multi-look wear, this reversible blue and grey US polo’s leather jacket will be your absolute favourite."
+    },
+    {
+      "name": "Panelled Zip-Front",
+      "image": "assets/images/WinterJacket/WinterJacket8.png",
+      "price": "5000",
+      "description": "You may have come across several black leather jackets, but this special biker jacket has its unique place. It comes with notch lapel and complete zip front adding trendy and sportive athletic look to it charmingly."
+    },
+    {
+      "name": "Faux Leather",
+      "image": "assets/images/WinterJacket/WinterJacket9.png",
+      "price": "10000",
+      "description": "If you are looking for something not very expensive, and within budget, then this Duke’s grey zip-front biker jacket is the right choice. Without burning a hole in your pocket, it can deliver an extremely modern and contemporary style statement in trendy natural appearance. "
+    },
+    {
+      "name": "Justanned",
+      "image": "assets/images/WinterJacket/WinterJacket10.png",
+      "price": "7000",
+      "description": "If you love black and prefer the timeless evergreen look, nothing better than going for a black solid leather jacket."
+    }
+  ]
+}
