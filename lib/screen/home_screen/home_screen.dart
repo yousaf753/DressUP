@@ -2,7 +2,6 @@ import 'package:dress_up/constant/animation_path.dart';
 import 'package:dress_up/constant/colors.dart';
 import 'package:dress_up/controller/cart_controller.dart';
 import 'package:dress_up/controller/order_controller.dart';
-import 'package:dress_up/controller/user_controller.dart';
 import 'package:dress_up/json_request/json_get_request.dart';
 import 'package:dress_up/model/products.dart';
 import 'package:dress_up/screen/object_screen/object_screen.dart';
@@ -24,7 +23,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:lottie/lottie.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import '../cart_screen/cart_screen.dart';
@@ -34,14 +32,15 @@ import '../offer_screen/offer3_screen.dart';
 import '../offer_screen/offer4_screen.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  User user;
+
+  HomePage({Key? key, required this.user}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  UserController userController = Get.put(UserController());
   ProductsModel productsModel = ProductsModel();
   CartController cartController = Get.put(CartController());
   OrderController orderController = Get.put(OrderController());
@@ -118,13 +117,14 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         ClipRRect(
                             borderRadius: BorderRadius.circular(300.0),
-                            child: Image.network(userController.image)),
+                            child:
+                                Image.network(widget.user.photoURL.toString())),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            customText(userController.name, 20,
+                            customText(widget.user.displayName.toString(), 20,
                                 AppColors.text2Color, FontWeight.normal),
-                            customText(userController.email, 10,
+                            customText(widget.user.email.toString(), 10,
                                 AppColors.text1Color, FontWeight.normal),
                           ],
                         ),
@@ -156,7 +156,7 @@ class _HomePageState extends State<HomePage> {
                         child: customText("My Order's", 20,
                             AppColors.text1Color, FontWeight.normal)),
                   ),
-                )
+                ),
               ],
             ),
           ),
