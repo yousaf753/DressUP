@@ -1,7 +1,9 @@
 import 'package:dress_up/constant/colors.dart';
 import 'package:dress_up/controller/cart_controller.dart';
 import 'package:dress_up/controller/order_controller.dart';
+import 'package:dress_up/controller/user_controller.dart';
 import 'package:dress_up/method/get_address.dart';
+import 'package:dress_up/screen/auth/sign_account.dart';
 import 'package:dress_up/widget/custom_image.dart';
 import 'package:dress_up/widget/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +24,7 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
+  final UserController _userController = Get.find();
   CartController cartController = Get.find();
   OrderController orderController = Get.find();
   late Position position;
@@ -50,23 +53,33 @@ class _CartScreenState extends State<CartScreen> {
                         FontWeight.bold),
                     InkWell(
                       onTap: () async {
+                        setState(() {
+                          _userController.getPreferences();
+                          _userController.getShared();
+                        });
                         try {
                           position = (await determineCurrentPosition())!;
-                          orderController.addOrder(
-                              cartController.cartItem,
-                              cartController.totalAmount,
-                              cartController.itemCount,
-                              position);
-                          if (cartController.totalAmount >= 1) {
-                            Get.off(OrderScreen(
-                              height: widget.height,
-                              width: widget.width,
-                            ));
+                          if (_userController.signIn == true) {
+                            if (cartController.totalAmount >= 1) {
+                              orderController.addOrder(
+                                  cartController.cartItem,
+                                  cartController.totalAmount,
+                                  cartController.itemCount,
+                                  position);
+                              Get.off(OrderScreen(
+                                height: widget.height,
+                                width: widget.width,
+                              ));
+                            } else {
+                              Get.snackbar("Add Some Item in Cart First",
+                                  "Than Place order");
+                            }
+                            cartController.clearCart();
                           } else {
-                            Get.snackbar("Add Some Item in Cart First",
-                                "Than Place order");
+                            Get.snackbar(
+                                "Sign In First", "Than continue shopping");
+                            Get.to(() => const SignInAccount());
                           }
-                          cartController.clearCart();
                         } catch (e) {
                           Get.snackbar("Location Service & Permission Required",
                               "Allow for proceeding to next");
@@ -83,7 +96,7 @@ class _CartScreenState extends State<CartScreen> {
                                 bottomLeft: Radius.circular(2.0),
                                 bottomRight: Radius.circular(20.0))),
                         child: Center(
-                            child: customText("Conform Order", 20,
+                            child: customText("Confirm Order", 20,
                                 AppColors.text1Color, FontWeight.normal)),
                       ),
                     ),
@@ -118,7 +131,7 @@ class _CartScreenState extends State<CartScreen> {
                               flex: 1,
                               child: Column(
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
+                                MainAxisAlignment.spaceAround,
                                 children: [
                                   customText(
                                       cartController.cartItem[index].name

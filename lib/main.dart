@@ -1,5 +1,5 @@
 // @dart=2.9
-import 'package:dress_up/screen/firebase_auth/auth.dart';
+import 'package:dress_up/screen/home_screen/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: GoogleSignInScreen(),
+      home: SplashScreen(),
     );
   }
 }

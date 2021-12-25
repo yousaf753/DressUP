@@ -141,8 +141,10 @@ class _KurtaDetailScreenState extends State<KurtaDetailScreen> {
                       child: customIcon(IconPath.add, 50, 50),
                     ),
                   ),
-                  const SizedBox(
-                    width: 30,
+                  SizedBox(
+                    width: 50,
+                    child: customText("  Quantity", 10, AppColors.text3Color,
+                        FontWeight.bold),
                   ),
                   InkWell(
                     onTap: () {

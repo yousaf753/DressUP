@@ -2,8 +2,10 @@ import 'package:dress_up/constant/animation_path.dart';
 import 'package:dress_up/constant/colors.dart';
 import 'package:dress_up/controller/cart_controller.dart';
 import 'package:dress_up/controller/order_controller.dart';
+import 'package:dress_up/controller/user_controller.dart';
 import 'package:dress_up/json_request/json_get_request.dart';
 import 'package:dress_up/model/products.dart';
+import 'package:dress_up/screen/auth/sign_account.dart';
 import 'package:dress_up/screen/object_screen/object_screen.dart';
 import 'package:dress_up/screen/order_screen/order_screen.dart';
 import 'package:dress_up/screen/product_screen/cap_screen.dart';
@@ -19,22 +21,24 @@ import 'package:dress_up/screen/product_screen/watch_screen.dart';
 import 'package:dress_up/widget/carouselslider.dart';
 import 'package:dress_up/widget/custom_text.dart';
 import 'package:dress_up/widget/products_container.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:lottie/lottie.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../cart_screen/cart_screen.dart';
 import '../offer_screen/offer1_screen.dart';
 import '../offer_screen/offer2_screen.dart';
 import '../offer_screen/offer3_screen.dart';
 import '../offer_screen/offer4_screen.dart';
+import 'about_us.dart';
+import 'mu_account.dart';
 
 class HomePage extends StatefulWidget {
-  User user;
-
-  HomePage({Key? key, required this.user}) : super(key: key);
+  const HomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -44,10 +48,12 @@ class _HomePageState extends State<HomePage> {
   ProductsModel productsModel = ProductsModel();
   CartController cartController = Get.put(CartController());
   OrderController orderController = Get.put(OrderController());
+  final UserController _userController = Get.put(UserController());
 
   @override
   void initState() {
-    // TODO: implement initState
+    _userController.getPreferences();
+    _userController.getShared();
     getProducts().then((value) {
       setState(() {
         productsModel = value;
@@ -61,6 +67,7 @@ class _HomePageState extends State<HomePage> {
     Size size = MediaQuery.of(context).size;
     double height = size.height;
     double width = size.width;
+
     final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
     return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
@@ -117,29 +124,86 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         ClipRRect(
                             borderRadius: BorderRadius.circular(300.0),
-                            child:
-                                Image.network(widget.user.photoURL.toString())),
+                            child: Image.network(_userController.image)),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            customText(widget.user.displayName.toString(), 20,
+                            customText(_userController.name, 20,
                                 AppColors.text2Color, FontWeight.normal),
-                            customText(widget.user.email.toString(), 10,
-                                AppColors.text1Color, FontWeight.normal),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            InkWell(
+                              onTap: () async {
+                                SharedPreferences preferences =
+                                    await SharedPreferences.getInstance();
+                                preferences.setBool("SignIn", false);
+                                Get.snackbar("You are Sign Out",
+                                    "For Shopping Sign In First");
+                              },
+                              child: Container(
+                                height: 30,
+                                width: 150,
+                                decoration: const BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(20.0),
+                                        topRight: Radius.circular(2.0),
+                                        bottomLeft: Radius.circular(2.0),
+                                        bottomRight: Radius.circular(20.0))),
+                                child: Center(
+                                    child: customText(
+                                        "Sign Out",
+                                        20,
+                                        AppColors.text1Color,
+                                        FontWeight.normal)),
+                              ),
+                            ),
                           ],
                         ),
                       ],
                     )),
                 InkWell(
                   onTap: () {
-                    if (orderController.itemCount >= 1) {
-                      Get.to(OrderScreen(
-                        height: height,
-                        width: width,
-                      ));
+                    Get.to(() => MyAccount());
+                  },
+                  child: Container(
+                    height: 30,
+                    width: 150,
+                    decoration: const BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20.0),
+                            topRight: Radius.circular(2.0),
+                            bottomLeft: Radius.circular(2.0),
+                            bottomRight: Radius.circular(20.0))),
+                    child: Center(
+                        child: customText("My Account", 20,
+                            AppColors.text1Color, FontWeight.normal)),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      _userController.getPreferences();
+                      _userController.getShared();
+                    });
+                    if (_userController.signIn == true) {
+                      if (orderController.itemCount >= 1) {
+                        Get.to(OrderScreen(
+                          height: height,
+                          width: width,
+                        ));
+                      } else {
+                        Get.snackbar(
+                            "Confirm an Order First", "Than check order");
+                      }
                     } else {
-                      Get.snackbar(
-                          "Confirm an Order First", "Than check order");
+                      Get.snackbar("Sign In First", "Than continue shopping");
+                      Get.to(() => const SignInAccount());
                     }
                   },
                   child: Container(
@@ -157,6 +221,39 @@ class _HomePageState extends State<HomePage> {
                             AppColors.text1Color, FontWeight.normal)),
                   ),
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
+                InkWell(
+                  onTap: () {
+                    Get.to(() => const AboutUs());
+                  },
+                  child: Container(
+                    height: 30,
+                    width: 150,
+                    decoration: BoxDecoration(
+                        color: AppColors.text2Color,
+                        borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(20.0),
+                            topRight: Radius.circular(2.0),
+                            bottomLeft: Radius.circular(2.0),
+                            bottomRight: Radius.circular(20.0))),
+                    child: Center(
+                        child: customText("About Us", 20, AppColors.text1Color,
+                            FontWeight.normal)),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(50),
+                  child: Column(
+                    children: [
+                      customText("For Any help Contact on", 10,
+                          AppColors.text1Color, FontWeight.bold),
+                      customText("03001234567", 30, AppColors.text2Color,
+                          FontWeight.bold)
+                    ],
+                  ),
+                )
               ],
             ),
           ),
