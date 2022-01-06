@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 class UserController extends GetxController {
   late String userName;
   late String email;
@@ -11,7 +10,6 @@ class UserController extends GetxController {
   late String password;
   bool otp = false;
   bool google = false;
-
   adduser(String nm, String em, String num, String adr, String pas) async {
     SharedPreferences preference = await SharedPreferences.getInstance();
     preference.setString("userName", nm);
@@ -26,7 +24,6 @@ class UserController extends GetxController {
     password = pas;
     update();
   }
-
   addName(
     String nam,
     String img,
@@ -38,7 +35,6 @@ class UserController extends GetxController {
     image = img;
     update();
   }
-
   Future getPreferences() async {
     SharedPreferences preference = await SharedPreferences.getInstance();
     userName = preference.getString("userName")!;
@@ -50,10 +46,8 @@ class UserController extends GetxController {
     image = preference.getString("image")!;
     update();
   }
-
   bool? check;
   bool? signIn;
-
   Future getShared() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     check = preferences.getBool("Created");
