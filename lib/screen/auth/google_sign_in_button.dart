@@ -1,6 +1,5 @@
 import 'package:dress_up/authentication/google_sign_in.dart';
 import 'package:dress_up/controller/user_controller.dart';
-import 'package:dress_up/screen/home_screen/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

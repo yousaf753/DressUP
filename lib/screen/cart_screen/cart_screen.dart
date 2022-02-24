@@ -11,12 +11,13 @@ import 'package:geolocator/geolocator.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+
 import '../order_screen/order_screen.dart';
 
 class CartScreen extends StatefulWidget {
-  double height, width;
+ final double height, width;
 
-  CartScreen({Key? key, required this.height, required this.width})
+  const CartScreen({Key? key, required this.height, required this.width})
       : super(key: key);
 
   @override
@@ -35,7 +36,7 @@ class _CartScreenState extends State<CartScreen> {
       backgroundColor: AppColors.primaryColor,
       body: SafeArea(
         child: SingleChildScrollView(
-          physics: ScrollPhysics(),
+          physics: const ScrollPhysics(),
           child: Column(
             children: [
               Container(

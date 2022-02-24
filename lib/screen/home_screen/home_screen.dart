@@ -24,9 +24,10 @@ import 'package:dress_up/widget/products_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
-import 'package:lottie/lottie.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import '../cart_screen/cart_screen.dart';
 import '../offer_screen/offer1_screen.dart';
 import '../offer_screen/offer2_screen.dart';
