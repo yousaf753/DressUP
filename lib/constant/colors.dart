@@ -10,4 +10,5 @@ class AppColors {
   static Color text3Color = const Color(0xff009688);
   static Color buttonColor = const Color(0xff99c140);
   static Color offerColor = const Color(0xffff0000);
+  static Color transparentColor = const Color(0x00ff0000);
 }

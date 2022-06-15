@@ -125,7 +125,7 @@ class _Offer4ScreenState extends State<Offer4Screen> {
                                   widget
                                       .productsModel.glasses![index].description
                                       .toString(),
-                                  1);
+                                  2);
                               Get.off(CartScreen(
                                   height: widget.height, width: widget.width));
                             },

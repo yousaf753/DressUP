@@ -9,3 +9,6 @@ Widget customText(
     textAlign: TextAlign.left,
   );
 }
+Widget customTextAuth({required String text,required Color color,required double size,required FontWeight fontWeight}) {
+  return Text(text,style: TextStyle(color: color,fontSize: size,fontWeight:fontWeight ),textAlign: TextAlign.center,);
+}

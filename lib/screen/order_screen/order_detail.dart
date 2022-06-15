@@ -37,13 +37,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
           physics: ScrollPhysics(),
           child: Column(
             children: [
-              InkWell(
-                onTap: () {
-                  Get.to(OrderLocation(
-                    position: orderController.orders[widget.index].position,
-                  ));
-                },
-                child: Container(
+              Container(
                   height: widget.height * 0.3,
                   padding: const EdgeInsets.all(6.0),
                   decoration: BoxDecoration(
@@ -51,7 +45,6 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                   ),
                   child: Lottie.asset(AnimationPath.location),
                 ),
-              ),
               Container(
                 height: widget.height * 0.1,
                 decoration: BoxDecoration(

@@ -1,9 +1,7 @@
 import 'package:dress_up/constant/colors.dart';
 import 'package:dress_up/controller/cart_controller.dart';
 import 'package:dress_up/controller/order_controller.dart';
-import 'package:dress_up/controller/user_controller.dart';
 import 'package:dress_up/method/get_address.dart';
-import 'package:dress_up/screen/auth/sign_account.dart';
 import 'package:dress_up/widget/custom_image.dart';
 import 'package:dress_up/widget/custom_text.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +23,6 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
-  final UserController _userController = Get.find();
   CartController cartController = Get.find();
   OrderController orderController = Get.find();
   late Position position;
@@ -54,13 +51,9 @@ class _CartScreenState extends State<CartScreen> {
                         FontWeight.bold),
                     InkWell(
                       onTap: () async {
-                        setState(() {
-                          _userController.getPreferences();
-                          _userController.getShared();
-                        });
                         try {
                           position = (await determineCurrentPosition())!;
-                          if (_userController.signIn == true) {
+
                             if (cartController.totalAmount >= 1) {
                               orderController.addOrder(
                                   cartController.cartItem,
@@ -76,11 +69,7 @@ class _CartScreenState extends State<CartScreen> {
                                   "Than Place order");
                             }
                             cartController.clearCart();
-                          } else {
-                            Get.snackbar(
-                                "Sign In First", "Than continue shopping");
-                            Get.to(() => const SignInAccount());
-                          }
+
                         } catch (e) {
                           Get.snackbar("Location Service & Permission Required",
                               "Allow for proceeding to next");

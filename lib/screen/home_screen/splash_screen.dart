@@ -1,18 +1,12 @@
 import 'dart:async';
 
 import 'package:dress_up/constant/colors.dart';
-import 'package:dress_up/screen/auth/creat_account.dart';
-import 'package:dress_up/screen/auth/sign_account.dart';
+import 'package:dress_up/screen/auth/sign_in.dart';
 import 'package:dress_up/widget/custom_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:lottie/lottie.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-import 'home_screen.dart';
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -27,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     setState(() {
       Timer(const Duration(seconds: 3), () {
-        checkScreen();
+        Get.to(() => const SignInScreen());
       });
     });
   }
@@ -64,18 +58,5 @@ class _SplashScreenState extends State<SplashScreen> {
         ],
       )),
     );
-  }
-
-  checkScreen() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    bool? check = preferences.getBool("Created");
-    bool? signIn = preferences.getBool("SignIn");
-    if (signIn == true && check == true) {
-      Get.to(() => const HomePage());
-    } else if (check == true) {
-      Get.to(() => const SignInAccount());
-    } else {
-      Get.to(() => const CreateAccount());
-    }
   }
 }
