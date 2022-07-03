@@ -1,0 +1,518 @@
+{
+  "category":[
+    {
+      "sub_category_name":"API Design",
+      "junior_level":[
+        {
+          "q":"What REST stands for?",
+          "a":"REST stands for REpresentational State Transfer. REST is web standards based architecture and uses HTTP Protocol for data communication. It revolves around resource where every component is a resource and a resource is accessed by a common interface using HTTP standard methods. REST was first introduced by Roy Fielding in 2000.\nIn REST architecture, a REST Server simply provides access to resources and REST client accesses and presents the resources. Here each resource is identified by URIs/ global IDs. REST uses various representations to represent a resource like text, JSON and XML. Now a days JSON is the most popular format being used in web services."
+        },
+        {
+          "q":"What are the core components of a HTTP Request?",
+          "a":"A HTTP Request has five major parts −\nVerb − Indicate HTTP methods such as GET, POST, DELETE, PUT etc.\nURI − Uniform Resource Identifier (URI) to identify the resource on server.\nHTTP Version − Indicate HTTP version, for example HTTP v1.1 .\nRequest Header − Contains metadata for the HTTP Request message as key-value pairs. For example, client ( or browser) type, format supported by client, format of message body, cache settings etc.\nRequest Body − Message content or Resource representation."
+        },
+        {
+          "q":"Define what is SOA",
+          "a":"A Service Oriented Architecture (SOA) is basically defined as an architectural pattern consisting of services. Here application components provide services to the other components using communication protocol over the network. This communication involves data exchanging or some coordination activity between services.\nSome of the key principles on which SOA is based are mentioned below\nThe service contract should be standardized containing all the description of the services.\nThere is loose coupling defining the less dependency between the web services and the client.\nIt should follow Service Abstraction rule, which says the service should not expose the way functionality has been executed to the client application.\nServices should be reusable in order to work with various application types.\nServices should be stateless having the feature of discoverability.\nServices break big problems into little problems and allow diverse subscribers to use the services."
+        },
+        {
+          "q":"What are advantages of REST web services?",
+          "a":"Some of the advantages of REST web services are:\nLearning curve is easy since it works on HTTP protocol\nSupports multiple technologies for data transfer such as text, xml, json, image etc.\nNo contract defined between server and client, so loosely coupled implementation.\nREST is a lightweight protocol\nREST methods can be tested easily over browser."
+        },
+        {
+          "q":"Mention some key characteristics of REST?",
+          "a":"Some key characteristics of REST includes\nREST is stateless, therefore the SERVER has no state (or session data)\nWith a well-applied REST API, the server could be restarted between two calls as every data is passed to the server\nWeb service mostly uses POST method to make operations, whereas REST uses GET to access resources"
+        },
+        {
+          "q":"Mention whether you can use GET request instead of PUT to create a resource?",
+          "a":"No, you are not supposed to use POST or GET. GET operations should only have view rights"
+        },
+        {
+          "q":"What is cached response?",
+          "a":"Caching refers to storing server response in client itself so that a client needs not to make server request for same resource again and again. A server response should have information about how a caching is to be done so that a client caches response for a period of time or never caches the server response."
+        },
+        {
+          "q":"What are different types of Web Services?",
+          "a":"There are two types of web services:\nSOAP Web Services: Runs on SOAP protocol and uses XML technology for sending data.\nRestful Web Services: It’s an architectural style and runs on HTTP/HTTPS protocol almost all the time. REST is a stateless client-server architecture where web services are resources and can be identified by their URIs. Client applications can use HTTP GET/POST methods to invoke Restful web services."
+        },
+        {
+          "q":"Mention what are resources in a REST architecture?",
+          "a":"Resources are identified by logical URLs; it is the key element of a RESTful design. Unlike, SOAP web services in REST, you view the product data as a resource and this resource should contain all the required information."
+        },
+        {
+          "q":"Explain the architectural style for creating web API?",
+          "a":"The architectural style for creating web api are\nHTTP for client server communication\nXML/JSON as formatting language\nSimple URI as the address for the services\nStateless communication"
+        },
+        {
+          "q":"What are the advantages of Web Services?",
+          "a":"Some of the advantages of web services are:\nInteroperability: Web services are accessible over network and runs on HTTP/SOAP protocol and uses XML/JSON to transport data, hence it can be developed in any programming language. Web service can be written in java programming and client can be PHP and vice versa.\nReusability: One web service can be used by many client applications at the same time.\nLoose Coupling: Web services client code is totally independent with server code, so we have achieved loose coupling in our application.\nEasy to deploy and integrate, just like web applications.\nMultiple service versions can be running at same time."
+        },
+        {
+          "q":"What is SOAP?",
+          "a":"SOAP stands for Simple Object Access Protocol. SOAP is an XML based industry standard protocol for designing and developing web services. Since it’s XML based, it’s platform and language independent. So our server can be based on JAVA and client can be on .NET, PHP etc. and vice versa."
+        }
+      ]
+    },
+    {
+      "sub_category_name":"Availability & Reliability",
+      "junior_level":[
+        {
+          "q":"What is Availability?",
+          "a":"Availability refers to the probability that a system performs correctly at a specific time instance (not duration). Interruptions may occur before or after the time instance for which the system’s availability is calculated. The service must be operational and adequately satisfy the defined specifications at the time of its usage.\nAvailability is often quantified by uptime (or downtime) as a percentage of time the service is available. Availability is generally measured in number of 9s--a service with 99.99% availability is described as having four 9s."
+        },
+        {
+          "q":"What is Reliability?",
+          "a":"Reliability is the probability that a system performs correctly during a specific time duration. During this correct operation, no repair is required or performed, and the system adequately follows the defined performance specifications.\nReliability follows an exponential failure law, which means that it reduces as the time duration considered for reliability calculations elapses. In other words, reliability of a system will be high at its initial state of operation and gradually reduce to its lowest magnitude over time."
+        },
+        {
+          "q":"What is Back-Pressure?",
+          "a":"When one component is struggling to keep-up, the system as a whole needs to respond in a sensible way. It is unacceptable for the component under stress to fail catastrophically or to drop messages in an uncontrolled fashion. Since it can’t cope and it can’t fail it should communicate the fact that it is under stress to upstream components and so get them to reduce the load.\nThis back-pressure is an important feedback mechanism that allows systems to gracefully respond to load rather than collapse under it. The back-pressure may cascade all the way up to the user, at which point responsiveness may degrade, but this mechanism will ensure that the system is resilient under load, and will provide information that may allow the system itself to apply other resources to help distribute the load."
+        },
+        {
+          "q":"How Do You Update A Live Heavy Traffic Site With Minimum Or Zero Down Time?",
+          "a":"Deploying a newer version of a live website can be a challenging task specially when a website has high traffic. Any downtime is going to affect the users. There are a few best practices that we can follow:\nBefore deploying on Production:\nThoroughly test the new changes and ensure it working in a test environment which is almost identical to production system.\nIf possible do automation of test cases as much as possible.\nCreate a automated sanity testing script (also called as smoke test) that can be run on production (without affecting real data). These are typically readonly type of test cases. However depending on your application needs you can add more cases to this. Make sure it can be run quickly by keeping it short.\nCreate scripts for all manual tasks(if possible), avoiding any hand typing mistakes during day of deployment.\nTest the script to make sure they work on a non-production environment.\nKeep the build artifacts ready. e.g application deployment files, database scripts, config files etc.\nCreate a checklist of things to do on day of deployment.\nRehearse. Deploy in a non-prod environment is almost identical to production. Try this with production data volumes(if possible). Make a note of time required for your tasks so you can plan accordingly.\nWhen doing deploying on a production environment:\nUse Green-Blue deployment technique to reduce down-time risk\nKeep backup of current site/data to be able to rollback\nUse sanity test cases before doing a lot of in depth testing"
+        }
+      ]
+    },
+    {
+      "sub_category_name":"Caching",
+      "junior_level":[
+        {
+          "q":"What is Caching?",
+          "a":"In computing, a cache is a high-speed data storage layer which stores a subset of data, typically transient in nature, so that future requests for that data are served up faster than is possible by accessing the data’s primary storage location. Caching allows you to efficiently reuse previously retrieved or computed data."
+        },
+        {
+          "q":"Is Redis just a cache?",
+          "a":"Like a cache Redis offers:\nin memory key-value storage\nBut unlike a cash Redis:\nSupports multiple datatypes (strings, hashes, lists, sets, sorted sets, bitmaps, and hyperloglogs)\nIt provides an ability to store cache data into physical storage (if needed).\nSupports pub-sub model\nRedis cache provides replication for high availability (master/slave)\nSupports ultra-fast lua-scripts. Its execution time equals to C commands execution.\nCan be shared across multiple instances of the application (instead of in-memory cache for each app instance)"
+        },
+        {
+          "q":"What is Resultset Caching?",
+          "a":"Resultset caching is storing the results of a database query along with the query in the application. Every time a web page generates a query, the applications checks whether the results are already cached, and if they are, pulls them from an in-memory data set instead. The application still has to render the page."
+        },
+        {
+          "q":"What is Cache Invalidation?",
+          "a":"There are only two hard things in Computer Science: cache invalidation and naming things.\n– Phil Karlton\nHTTP caching is a solution for improving the performance of your web application. For lower load on the application and fastest response time, you want to cache content for a long period (TTL). But at the same time, you want your clients to see fresh (validate the freshness) content as soon as there is an update.\nCache invalidation gives you the best of both worlds: you can have very long TTLs, so when content changes little, it can be served from the cache because no requests to your application are required. At the same time, when data does change, that change is reflected without delay in the web representations."
+        },
+        {
+          "q":"What usually should be cached?",
+          "a":"The results for the following processes are good candidates for caching:\nLong-running queries on databases,\nhigh-latency network requests (for external APIs),\ncomputation-intensive processing"
+        },
+        {
+          "q":"Name some Cache Writing Strategies",
+          "a":"There are two common strategies to write data in a cache:\nPre-caching data, for small pieces of data, usually during the application initialization, before any request.\nOn-demand, checking first if the requested data is in the cache (if the data is found, it is called a cache hit), using it, improving the performance of the application. Whenever the requested data has not been written to the cache (cache miss), the application will need to retrieve it from the slower source, then writing the results in the cache, thus saving time on subsequent requests for the same data."
+        }
+      ]
+    },
+    {
+      "sub_category_name":"CAP Theorem",
+      "junior_level":[
+        {
+          "q":"What Is CAP Theorem?",
+          "a":"The CAP Theorem for distributed computing was published by Eric Brewer. This states that it is not possible for a distributed computer system to simultaneously provide all three of the following guarantees:\nConsistency (all nodes see the same data even at the same time with concurrent updates )\nAvailability (a guarantee that every request receives a response about whether it was successful or failed)\nPartition tolerance (the system continues to operate despite arbitrary message loss or failure of part of the system)\nThe CAP acronym corresponds to these three guarantees. This theorem has created the base for modern distributed computing approaches. Worlds most high volume traffic companies (e.g. Amazon, Google, Facebook) use this as basis for deciding their application architecture. It's important to understand that only two of these three conditions can be guaranteed to be met by a system."
+        },
+        {
+          "q":"Why is CAP Theorem true?",
+          "a":"It's proofed by construction. Basically we demonstrate a single situation where a system cannot be consistent and available in the same time:\nIf a client writes to one side of a partition, any reads that go to the other side of that partition can't possibly know about the most recent write. Now you're faced with a choice: do you respond to the reads with potentially stale information, or do you wait (potentially forever) to hear from the other side of the partition and compromise availability?"
+        },
+        {
+          "q":"What does the CAP Theorem actually say?",
+          "a":"The CAP Theorem says that it is impossible to build an implementation of read-write storage/system in an asynchronous network that satisfies all of the following three properties:\nAvailability - will a request made to the data store always eventually complete?\nConsistency - will all executions of reads and writes seen by all nodes be atomic or linearizably consistent?\nPartition tolerance - the network is allowed to drop any messages.\nMore informally, the CAP theorem tells us that we can't build a database/system that both responds to every request and returns the results that you would expect every time."
+        },
+        {
+          "q":"Can you 'got around' or 'beat' the CAP Theorem?",
+          "a":"No. You might have designed a system that is not heavily affected by it. That's good."
+        },
+        {
+          "q":"What is a Partition in CAP Theorem?",
+          "a":"One such fallacy of distributed computing is that networks are reliable. They aren't. Networks and parts of networks go down frequently and unexpectedly.\nA partition is when the network fails to deliver some messages to one or more nodes by losing them (not by delaying them - eventual delivery is not a partition).\nThe basic idea of CAP proof is that if a client writes to one side of a partition (namely, network fails), any reads that go to the other side of that partition can't possibly know about the most recent write. The proof of CAP relied on a total partition. In practice, these are arguably the most likely since all messages may flow through one component; if that fails then message loss is usually total between two nodes."
+        }
+      ]
+    },
+    {
+      "sub_category_name":"Concurrency",
+      "junior_level":[
+        {
+          "q":"What is a Deadlock?",
+          "a":"A lock occurs when multiple processes try to access the same resource at the same time. One process loses out and must wait for the other to finish.\nA deadlock occurs when the waiting process is still holding on to another resource that the first needs before it can finish.\nSo, an example:\nResource A and resource B are used by process X and process Y\nX starts to use A.\nX and Y try to start using B\nY 'wins' and gets B first\nnow Y needs to use A\nA is locked by X, which is waiting for Y\nThread 1 Thread 2\nLock1->Lock(); Lock2->Lock();\nWaitForLock2(); WaitForLock1(); <-- Oops!\nThe best way to avoid deadlocks is to avoid having processes cross over in this way. Reduce the need to lock anything as much as you can. In databases avoid making lots of changes to different tables in a single transaction, avoid triggers and switch to optimistic/dirty/nolock reads as much as possible."
+        },
+        {
+          "q":"Explain the difference between Asynchronous and Parallel programming?",
+          "a":"When you run something asynchronously it means it is non-blocking, you execute it without waiting for it to complete and carry on with other things. Parallelism means to run multiple things at the same time, in parallel. Parallelism works well when you can separate tasks into independent pieces of work. Async and Callbacks are generally a way (tool or mechanism) to express concurrency i.e. a set of entities possibly talking to each other and sharing resources.\nTake for example rendering frames of a 3D animation. To render the animation takes a long time so if you were to launch that render from within your animation editing software you would make sure it was running asynchronously so it didn't lock up your UI and you could continue doing other things. Now, each frame of that animation can also be considered as an individual task. If we have multiple CPUs/Cores or multiple machines available, we can render multiple frames in parallel to speed up the overall workload."
+        },
+        {
+          "q":"What is a Mutex?",
+          "a":"A Mutex is a mutually exclusive object. It acts as a gate keeper to synchronise two threads. When you have two threads attempting to access a single resource, the general pattern is to have the first block of code attempting access, to set the mutex before entering the code. When the second code block attempts access, it sees that the mutex is set and waits until the first block of code is complete (and un-sets the mutex), then continues.\nSpecific details of how this is accomplished obviously varies greatly by programming language."
+        },
+        {
+          "q":"Is there any difference between a Binary Semaphore and Mutex?",
+          "a":"A mutex (or Mutual Exclusion Semaphores) is a locking mechanism used to synchronize access to a resource. Only one task (can be a thread or process based on OS abstraction) can acquire the mutex. It means there will be ownership associated with mutex, and only the owner can release the lock (mutex).\nSemaphore (or Binary Semaphore) is signaling mechanism (“I am done, you can carry on” kind of signal). For example, if you are listening songs (assume it as one task) on your mobile and at the same time your friend called you, an interrupt will be triggered upon which an interrupt service routine (ISR) will signal the call processing task to wakeup. A binary semaphore is NOT protecting a resource from access. Semaphores are more suitable for some synchronization problems like producer-consumer.\nShort version:\nA mutex can be released only by the thread that had acquired it.\nA binary semaphore can be signaled by any thread (or process)."
+        },
+        {
+          "q":"What is a Race Condition?",
+          "a":"A race condition is a situation on concurrent programming where two concurrent threads or processes compete for a resource and the resulting final state depends on who gets the resource first.\nBecause the thread scheduling algorithm can swap between threads at any time, you don't know the order in which the threads will attempt to access the shared data. Therefore, the result of the change in data is dependent on the thread scheduling algorithm, i.e. both threads are \"racing\" to access/change the data.\nProblems often occur when one thread does a \"check-then-act\" (e.g. \"check\" if the value is X, then \"act\" to do something that depends on the value being X) and another thread does something to the value in between the \"check\" and the \"act\". E.g:\nif (x == 5) // The \"Check\"\n{\ny = x * 2; // The \"Act\"\n// If another thread changed x in between \"if (x == 5)\" and \"y = x * 2\" above,\n// y will not be equal to 10.\n}\nThe point being, y could be 10, or it could be anything, depending on whether another thread changed x in between the check and act. You have no real way of knowing.\nIn order to prevent race conditions from occurring, you would typically put a lock (Mutex or Semaphores) around the shared data to ensure only one thread can access the data at a time. This would mean something like this:\n// Obtain lock for x\nif (x == 5)\n{\ny = x * 2; // Now, nothing can change x until the lock is released.\n// Therefore y = 10\n}\n// release lock for x"
+        }]
+    },
+    {
+      "sub_category_name":"Cryptography",
+      "junior_level":[
+        {
+          "q":"What is a key?",
+          "a":"In cryptography a key is a piece of information used in combination with an algorithm (a cipher) to transform plaintext into ciphertext (encryption) and vice versa (decryption).\nA cipher can be reciprocal if it is used for both encryption and decryption, or non-reciprocal if a transformation to the key is required when using it in reverse."
+        },
+        {
+          "q":"Explain what is Data Encryption?",
+          "a":"Data encryption translates data into another form, or code, so that only people with access to a secret key (formally called a decryption key) or password can read it. Encrypted data is commonly referred to as ciphertext, while unencrypted data is called plaintext."
+        },
+        {
+          "q":"Why is the Root Certificate important?",
+          "a":"A Root SSL certificate is a certificate issued by a trusted certificate authority (CA).\nIn the SSL ecosystem, anyone can generate a signing key and sign a new certificate with that signature. However, that certificate is not considered valid unless it has been directly or indirectly signed by a trusted CA.\nA trusted certificate authority is an entity that has been entitled to verify that someone is effectively who it declares to be. In order for this model to work, all the participants on the game must agree on a set of CA which they trust. All operating systems and most of web browsers ship with a set of trusted CAs."
+        },
+        {
+          "q":"What is Symmetric Encryption?",
+          "a":"Symmetric Encryption is the simplest kind of encryption that involves only one secret key to cipher and decipher information. Symmetric encryption is an old and best-known technique. It uses a secret key that can either be a number, a word or a string of random letters. It is a blended with the plain text of a message to change the content in a particular way. The sender and the recipient should know the secret key that is used to encrypt and decrypt all the messages. Blowfish, AES, RC4, DES, RC5, and RC6 are examples of symmetric encryption. The most widely used symmetric algorithm is AES-128, AES-192, and AES-256.\nThe main disadvantage of the symmetric key encryption is that all parties involved have to exchange the key used to encrypt the data before they can decrypt it."
+        },
+        {
+          "q":"What are Confusion and Diffusion in Cryptography?",
+          "a":"Confusion means that each binary digit (bit) of the ciphertext should depend on several parts of the key, obscuring the connections between the two. The property of confusion hides the relationship between the ciphertext and the key. This property makes it difficult to find the key from the ciphertext and if a single bit in a key is changed, the calculation of the values of most or all of the bits in the ciphertext will be affected. Confusion increases the ambiguity of ciphertext and it is used by both block and stream ciphers.\nDiffusion means that if we change a single bit of the plaintext, then (statistically) half of the bits in the ciphertext should change, and similarly, if we change one bit of the ciphertext, then approximately one half of the plaintext bits should change.2 Since a bit can have only two states, when they are all re-evaluated and changed from one seemingly random position to another, half of the bits will have changed state. The idea of diffusion is to hide the relationship between the ciphertext and the plain text. This will make it hard for an attacker who tries to find out the plain text and it increases the redundancy of plain text by spreading it across the rows and columns; it is achieved through transposition of algorithm and it is used by block ciphers only.\nThese two properties help to ensure that extracting the key from plaintext-ciphertext pairs is difficult or infeasible."
+        },
+        {
+          "q":"Explain difference between Hashing and Encryption algorithms",
+          "a":"Hash Functions provide a mapping between an arbitrary length input, and a (usually) fixed length (or smaller length) output. A hash function could be considered the same as baking a loaf of bread. You start out with inputs (flour, water, yeast, etc...) and after applying the hash function (mixing + baking), you end up with an output: a loaf of bread.\nGoing the other way is extraordinarily difficult - you can't really separate the bread back into flour, water, yeast - some of that was lost during the baking process, and you can never tell exactly how much water or flour or yeast was used for a particular loaf, because that information was destroyed by the hashing function (aka the oven).\nMany different variants of inputs will theoretically produce identical loaves (e.g. 2 cups of water and 1 tsbp of yeast produce exactly the same loaf as 2.1 cups of water and 0.9tsbp of yeast), but given one of those loaves, you can't tell exactly what combo of inputs produced it.\nEncryption Functions provide a 1:1 mapping between an arbitrary length input and output. And they are always reversible. The important thing to note is that it's reversible using some method. And it's always 1:1 for a given key. Encryption could be viewed as a safe deposit box. Whatever you put in there comes back out, as long as you possess the key with which it was locked up in the first place. It's a symmetric operation. Given a key and some input, you get a certain output. Given that output, and the same key, you'll get back the original input. It's a 1:1 mapping."
+        }
+      ]
+    },
+    {
+      "sub_category_name":"Databases",
+      "junior_level":[
+        {
+          "q":"What is Normalization?",
+          "a":"It is the process of eliminating redundant data and maintaining data dependencies."
+        },
+        {
+          "q":"What are the advantages of NoSQL over traditional RDBMS?",
+          "a":"NoSQL is better than RDBMS because of the following reasons/properities of NoSQL:\nIt supports semi-structured data and volatile data\nIt does not have schema\nRead/Write throughput is very high\nHorizontal scalability can be achieved easily\nWill support Bigdata in volumes of Terra Bytes & Peta Bytes\nProvides good support for Analytic tools on top of Bigdata\nCan be hosted in cheaper hardware machines\nIn-memory caching option is available to increase the performance of queries\nFaster development life cycles for developers\nStill, RDBMS is better than NoSQL for the following reasons/properties of RDBMS:\nTransactions with ACID properties - Atomicity, Consistency, Isolation & Durability\nAdherence to Strong Schema of data being written/read\nReal time query management ( in case of data size < 10 Tera bytes )\nExecution of complex queries involving join & group by clauses"
+        },
+        {
+          "q":"Define ACID Properties",
+          "a":"Atomicity: It ensures all-or-none rule for database modifications.\nConsistency: Data values are consistent across the database.\nIsolation: Two transactions are said to be independent of one another.\nDurability: Data is not lost even at the time of server failure."
+        },
+        {
+          "q":"What is Denormalization?",
+          "a":"It is the process of improving the performance of the database by adding redundant data."
+        },
+        {
+          "q":"What are the difference between clustered and a non-clustered index?",
+          "a":"A clustered index is a special type of index that reorders the way records in the table are physically stored. Therefore table can have only one clustered index. The leaf nodes of a clustered index contain the data pages.\nA non clustered index is a special type of index in which the logical order of the index does not match the physical stored order of the rows on disk. The leaf node of a non clustered index does not consist of the data pages. Instead, the leaf nodes contain index rows."
+        },
+        {
+          "q":"How a database index can help performance?",
+          "a":"The whole point of having an index is to speed up search queries by essentially cutting down the number of records/rows in a table that need to be examined. An index is a data structure (most commonly a B- tree) that stores the values for a specific column in a table."
+        }
+      ]
+    },
+    {
+      "sub_category_name":"Docker",
+      "junior_level":[
+        {
+          "q":"What is Docker?",
+          "a":"Docker is a containerization platform which packages your application and all its dependencies together in the form of containers so as to ensure that your application works seamlessly in any environment be it development or test or production.\nDocker containers, wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries etc. anything that can be installed on a server.\nThis guarantees that the software will always run the same, regardless of its environment."
+        },
+        {
+          "q":"What is the difference between a Docker image and a container?",
+          "a":"An instance of an image is called a container. You have an image, which is a set of layers. If you start this image, you have a running container of this image. You can have many running containers of the same image.\nYou can see all your images with docker images whereas you can see your running containers with docker ps (and you can see all containers with docker ps -a).\nSo a running instance of an image is a container."
+        },
+        {
+          "q":"What is the difference between the COPY and ADD commands in a Dockerfile?",
+          "a":"Although ADD and COPY are functionally similar, generally speaking, COPY is preferred.\nThat’s because it’s more transparent than ADD. COPY only supports the basic copying of local files into the container, while ADD has some features (like local-only tar extraction and remote URL support) that are not immediately obvious. Consequently, the best use for ADD is local tar file auto-extraction into the image, as in ADD rootfs.tar.xz /."
+        },
+        {
+          "q":"What is Docker hub?",
+          "a":"Docker hub is a cloud-based registry service which allows you to link to code repositories, build your images and test them, stores manually pushed images, and links to Docker cloud so you can deploy images to your hosts. It provides a centralized resource for container image discovery, distribution and change management, user and team collaboration, and workflow automation throughout the development pipeline."
+        },
+        {
+          "q":"What are the various states that a Docker container can be in at any given point in time?",
+          "a":"There are four states that a Docker container can be in, at any given point in time. Those states are as given as follows:\nRunning\nPaused\nRestarting\nExited"
+        },
+        {
+          "q":"When would you use ‘docker kill’ or ‘docker rm -f’?",
+          "a":"If you must stop the container really quickly… (someone pushed something to production on Friday evening?… ;) )"
+        },
+        {
+          "q":"Is there a way to identify the status of a Docker container?",
+          "a":"We can identify the status of a Docker container by running the command\ndocker ps –a\nwhich will in turn list down all the available docker containers with its corresponding statuses on the host. From there we can easily identify the container of interest to check its status correspondingly."
+        },
+        {
+          "q":"What is the difference between ‘docker run’ and ‘docker create’?",
+          "a":"The primary difference is that using ‘docker create’ creates a container in a stopped state.\nBonus point: You can use ‘docker create’ and store an outputed container ID for later use. The best way to do it is to use ‘docker run’ with --cidfile FILE_NAME as running it again won’t allow to overwrite the file. A good practice is to keep well ogranised directory structure: /containers/web/server1/ws.cid containers/web/server3/ws.cid"
+        },
+        {
+          "q":"What is the difference between CMD and ENTRYPOINT in a Dockerfile?",
+          "a":"Both CMD and ENTRYPOINT instructions define what command gets executed when running a container. There are few rules that describe their co-operation.\nDockerfile should specify at least one of CMD or ENTRYPOINT commands.\nENTRYPOINT should be defined when using the container as an executable.\nCMD should be used as a way of defining default arguments for an ENTRYPOINT command or for executing an ad-hoc command in a container.\nCMD will be overridden when running the container with alternative argumen"
+        },
+        {
+          "q":"What’s the difference between a repository and a registry?",
+          "a":"Docker registry is a service for hosting and distributing images (the default one is the Docker Hub).\nDocker repository is a collection of related Docker images (the same name but with different tags)."
+        },
+        {
+          "q":"Do I lose my data when the Docker container exits?",
+          "a":"There is no loss of data when any of your Docker containers exits as any of the data that your application writes to the disk in order to preserve it. This will be done until the container is explicitly deleted. The file system for the Docker container persists even after the Docker container is halted."
+        },
+        {
+          "q":"Can you remove (‘docker rm’) a container that is paused?",
+          "a":"No, to remove a container it must be stopped first."
+        },
+        {
+          "q":"What is Build Cache in Docker?",
+          "a":"When we build an Image, Docker will process each line in Dockerfile. It will execute the commands on each line in the order that is mentioned in the file. But at each line, before running any command, Docker will check if there is already an existing image in its cache that can be reused rather than creating a new image."
+        },
+        {
+          "q":"How to build envrionment-agnostic systems with Docker?",
+          "a":"There are three main features helping to achieve that:\nVolumes\nEnvironment variable injection\nRead-only file systems"
+        },
+        {
+          "q":"How to link containers?",
+          "a":"The simplest way is to use network port mapping. There’s also the - -link flag which is deprecated."
+        },
+        {
+          "q":"What type of applications - Stateless or Stateful are more suitable for Docker Container?",
+          "a":"It is preferable to create Stateless application for Docker Container. We can create a container out of our application and take out the configurable state parameters from application. Now we can run same container in Production as well as QA environments with different parameters. This helps in reusing the same Image in different scenarios. Also a stateless application is much easier to scale with Docker Containers than a stateful application."
+        },
+        {
+          "q":"What is Docker image?",
+          "a":"Docker image is the source of Docker container. In other words, Docker images are used to create containers. Images are created with the build command, and they’ll produce a container when started with run. Images are stored in a Docker registry such as registry.hub.docker.com because they can become quite large, images are designed to be composed of layers of other images, allowing a minimal amount of data to be sent when transferring images over the network."
+        },
+        {
+          "q":"What is Docker container?",
+          "a":"Docker containers include the application and all of its dependencies, but share the kernel with other containers, running as isolated processes in user space on the host operating system. Docker containers are not tied to any specific infrastructure: they run on any computer, on any infrastructure, and in any cloud."
+        },
+        {
+          "q":"What are the most common instructions in Dockerfile?",
+          "a":"Some of the common instructions in Dockerfile are as follows:\nFROM: We use FROM to set the base image for subsequent instructions. In every valid Dockerfile, FROM is the first instruction.\nLABEL: We use LABEL to organize our images as per project, module, licensing etc. We can also use LABEL to help in automation.\nIn LABEL we specify a key value pair that can be later used for programmatically handling the Dockerfile.\nRUN: We use RUN command to execute any instructions in a new layer on top of the current image. With each RUN command we add something on top of the image and use it in subsequent steps in Dockerfile.\nCMD: We use CMD command to provide default values of an executing container. In a Dockerfile, if we include multiple CMD commands, then only the last instruction is used."
+        },
+        {
+          "q":"How do I transfer a Docker image from one machine to another one without using a repository, no matter private or public?",
+          "a":"You will need to save the Docker image as a tar file:\ndocker save - o <path for generated tar file> <image name>\nThen copy your image to a new system with regular file transfer tools such as cp or scp. After that you will have to load the image into Docker:\ndocker load -i <path to image tar file>"
+        }
+      ]
+    },
+    {
+      "sub_category_name":"Layering & Middleware",
+      "junior_level":[
+        {
+          "q":"Why is it a good idea for “lower” application layers not to be aware of “higher” ones?",
+          "a":"The fundamental motivation is this:\nYou want to be able to rip an entire layer out and substitute a completely different (rewritten) one, and NOBODY SHOULD (BE ABLE TO) NOTICE THE DIFFERENCE.\nThe most obvious example is ripping the bottom layer out and substituting a different one. This is what you do when you develop the upper layer(s) against a simulation of the hardware, and then substitute in the real hardware.\nAlso layers, modules, indeed architecture itself, are means of making computer programs easier to understand by humans."
+        },
+        {
+          "q":"What Is Middle Tier Clustering?",
+          "a":"Middle tier clustering is just a cluster that is used for service the middle tier in a application. This is popular since many clients may be using middle tier and a lot of heavy load may also be served by middle tier that requires it be to highly available.\nFailure of middle tier can cause multiple clients and systems to fail, therefore its one of the approaches to do clustering at the middle tier of a application. In general any application that has a business logic that can be shared across multiple client can use a middle tier cluster for high availability."
+        },
+        {
+          "q":"Why layering your application is important? Provide some bad layering example.",
+          "a":"Each component should contain 'layers' - a dedicated object for the web, logic and data access code. This not only draws a clean separation of concerns but also significantly eases mocking and testing the system.\nThough this is a very common pattern, API developers tend to mix layers by passing the web layer objects (for example Express req, res) to business logic and data layers - this makes your application dependant on and accessible by Express only. App that mixes web objects with other layers can not be accessed by testing code, CRON jobs and other non-Express callers"
+        }
+      ]
+    },
+    {
+      "sub_category_name":"Load Balancing",
+      "junior_level":[
+        {
+          "q":"What Is Load Balancing?",
+          "a":"Load balancing is simple technique for distributing workloads across multiple machines or clusters. The most common and simple load balancing algorithm is Round Robin. In this type of load balancing the request is divided in circular order ensuring all machines get equal number of requests and no single machine is overloaded or underloaded.\nThe Purpose of load balancing is to\nOptimize resource usage (avoid overload and under-load of any machines)\nAchieve Maximum Throughput\nMinimize response time\nMost common load balancing techniques in web based applications are\nRound robin\nSession affinity or sticky session\nIP Address affinity"
+        },
+        {
+          "q":"What Is Round-Robin Load Balancing?",
+          "a":"Round‑robin load balancing is one of the simplest methods for distributing client requests across a group of servers. Going down the list of servers in the group, the round‑robin load balancer forwards a client request to each server in turn. When it reaches the end of the list, the load balancer loops back and goes down the list again (sends the next request to the first listed server, the one after that to the second server, and so on)."
+        },
+        {
+          "q":"Name some advantages of Round-Robin Load Balancing",
+          "a":"The main benefit of round‑robin load balancing is that it is extremely simple to implement. However, it does not always result in the most accurate or efficient distribution of traffic, because many round‑robin load balancers assume that all servers are the same: currently up, currently handling the same load, and with the same storage and computing capacity."
+        },
+        {
+          "q":"What Is Sticky Session Load Balancing? What Do You Mean By \"Session Affinity\"?",
+          "a":"Sticky session or a session affinity technique is another popular load balancing technique that requires a user session to be always served by an allocated machine.\nIn a load balanced server application where user information is stored in session it will be required to keep the session data available to all machines. This can be avoided by always serving a particular user session request from one machine. The machine is associated with a session as soon as the session is created. All the requests in a particular session are always redirected to the associated machine. This ensures the user data is only at one machine and load is also shared.\nThis is typically done by using SessionId cookie. The cookie is sent to the client for the first request and every subsequent request by client must be containing that same cookie to identify the session.\nWhat Are The Issues With Sticky Session?\nThere are few issues that you may face with this approach\nThe client browser may not support cookies, and your load balancer will not be able to identify if a request belongs to a session. This may cause strange behavior for the users who use no cookie based browsers.\nIn case one of the machine fails or goes down, the user information (served by that machine) will be lost and there will be no way to recover user session."
+        },
+        {
+          "q":"What Is Load Balancing Fail Over?",
+          "a":"Fail over means switching to another machine when one of the machine fails. Fail over is a important technique in achieving high availability. Typically a load balancer is configured to fail over to another machine when the main machine fails.\nTo achieve least down time, most load balancer support a feature of heart beat check. This ensures that target machine is responding. As soon as a hear beat signal fails, load balancer stops sending request to that machine and redirects to other machines or cluster."
+        },
+        {
+          "q":"Why should we use Load Balancer (except preventing overloading)?",
+          "a":"Load balancers distribute incoming client requests to computing resources such as application servers and databases. In each case, the load balancer returns the response from the computing resource to the appropriate client. Load balancers are effective at:\nPreventing requests from going to unhealthy servers\nPreventing overloading resources\nHelping eliminate single points of failure\nAdditional benefits include:\nSSL termination - Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations\nRemoves the need to install X.509 certificates on each server\nSession persistence - Issue cookies and route a specific client's requests to same instance if the web apps do not keep track of sessions"
+        },
+        {
+          "q":"What is the difference between Session Affinity and Sticky Session?",
+          "a":"Sticky session means that when a request comes into a site from a client all further requests go to the same server initial client request accessed. I believe that session affinity is a synonym for sticky session, but there are different ways of implementing it:\nSend a cookie on the first response and then look for it on subsequent ones. The cookie says which real server to send to. Bad if you have to support cookie-less browsers\nPartition based on the requester's IP address. Bad if it isn't static or if many come in through the same proxy.\nIf you authenticate users, partition based on user name (it has to be an HTTP supported authentication mode to do this).\nDon't require state. Let clients hit any server (send state to the client and have them send it back) This is not a sticky session, it's a way to avoid having to do it.\nI would suspect that sticky might refer to the cookie way, and that affinity might refer to #2 and #3 in some contexts, but that's not how I have seen it used (or use it myself)."
+        }
+      ]
+    },
+    {
+      "sub_category_name":"Microservices",
+      "junior_level":[
+        {
+          "q":"Define Microservice Architecture",
+          "a":"Microservices, aka Microservice Architecture, is an architectural style that structures an application as a collection of small autonomous services, modeled around a business domain."
+        },
+        {
+          "q":"List down the advantages of Microservices Architecture",
+          "a":"Independent Development. All microservices can be easily developed based on their individual functionality\nIndependent Deployment. Based on their services, they can be individually deployed in any application\nFault Isolation. Even if one service of the application does not work, the system still continues to function\nMixed Technology Stack. Different languages and technologies can be used to build different services of the same application\nGranular Scaling. Individual components can scale as per need, there is no need to scale all components together"
+        },
+        {
+          "q":"Why Would You Opt For Microservices Architecture?",
+          "a":"There are plenty of pros that are offered by Microservices architecture. Here are a few of them:\nMicroservices can adapt easily to other frameworks or technologies.\nFailure of a single process does not affect the entire system.\nProvides support to big enterprises as well as small teams.\nCan be deployed independently and in relatively less time."
+        },
+        {
+          "q":"What are main differences between Microservices and Monolithic Architecture?",
+          "a":"Microservices\nService Startup is fast\nMicroservices are loosely coupled architecture.\nChanges done in a single data model does not affect other Microservices.\nMicroservices focuses on products, not projects\nMonolithic Architecture\nService startup takes time\nMonolithic architecture is mostly tightly coupled.\nAny changes in the data model affect the entire database\nMonolithic put emphasize over the whole project"
+        },
+        {
+          "q":"What are the standard patterns of orchestrating microservices?",
+          "a":"As we start to model more and more complex logic, we have to deal with the problem of managing business processes that stretch across the boundary of individual services.\nWith orchestration, we rely on a central brain to guide and drive the process, much like the conductor in an orchestra. The orchestration style corresponds more to the SOA idea of orchestration/task services. For example we could wrap the business flow in its own service. Where the proxy orchestrates the interaction between the microservices like shown in the below picture.\nWith choreography, we inform each part of the system of its job, and let it work out the details, like dancers all find‐ ing their way and reacting to others around them in a ballet. The choreography style corresponds to the dumb pipes and smart endpoints mentioned by Martin Fowler's. That approach is also called the domain approach and is using domain events, where each service publish events regarding what have happened and other services can subscribe to those events."
+        },
+        {
+          "q":"Whether do you find GraphQL the right fit for designing microservice architecture?",
+          "a":"GraphQL and microservices are a perfect fit, because GraphQL hides the fact that you have a microservice architecture from the clients. From a backend perspective, you want to split everything into microservices, but from a frontend perspective, you would like all your data to come from a single API. Using GraphQL is the best way I know of that lets you do both. It lets you split up your backend into microservices, while still providing a single API to all your application, and allowing joins across data from different services."
+        }
+      ]
+    },
+    {
+      "sub_category_name":"NoSQL",
+      "junior_level":[
+        {
+          "q":"What are NoSQL databases? What are the different types of NoSQL databases?",
+          "a":"A NoSQL database provides a mechanism for storage and retrieval of data that is modeled in means other than the tabular relations used in relational databases (like SQL, Oracle, etc.).\nTypes of NoSQL databases:\nDocument Oriented\nKey Value\nGraph\nColumn Oriented"
+        },
+        {
+          "q":"What do you understand by NoSQL databases? Explain.",
+          "a":"At the present time, the internet is loaded with big data, big users, big complexity etc. and also becoming more complex day by day. NoSQL is answer of all these problems; It is not a traditional database management system, not even a relational database management system (RDBMS). NoSQL stands for “Not Only SQL”. NoSQL is a type of database that can handle and sort all type of unstructured, messy and complicated data. It is just a new way to think about the database."
+        },
+        {
+          "q":"What are the advantages of NoSQL over traditional RDBMS?",
+          "a":"NoSQL is better than RDBMS because of the following reasons/properities of NoSQL:\nIt supports semi-structured data and volatile data\nIt does not have schema\nRead/Write throughput is very high\nHorizontal scalability can be achieved easily\nWill support Bigdata in volumes of Terra Bytes & Peta Bytes\nProvides good support for Analytic tools on top of Bigdata\nCan be hosted in cheaper hardware machines\nIn-memory caching option is available to increase the performance of queries\nFaster development life cycles for developers\nStill, RDBMS is better than NoSQL for the following reasons/properties of RDBMS:\nTransactions with ACID properties - Atomicity, Consistency, Isolation & Durability\nAdherence to Strong Schema of data being written/read\nReal time query management ( in case of data size < 10 Tera bytes )\nExecution of complex queries involving join & group by clauses"
+        },
+        {
+          "q":"Explain difference between scaling horizontally and vertically for databases",
+          "a":"Horizontal scaling means that you scale by adding more machines into your pool of resources whereas\nVertical scaling means that you scale by adding more power (CPU, RAM) to an existing machine.\nIn a database world horizontal-scaling is often based on the partitioning of the data i.e. each node contains only part of the data, in vertical-scaling the data resides on a single node and scaling is done through multi-core i.e. spreading the load between the CPU and RAM resources of that machine.\nGood examples of horizontal scaling are Cassandra, MongoDB, Google Cloud Spanner. and a good example of vertical scaling is MySQL - Amazon RDS (The cloud version of MySQL)."
+        },
+        {
+          "q":"When would you use NoSQL?",
+          "a":"It depends from some general points:\nNoSQL is typically good for unstructured/\"schemaless\" data - usually, you don't need to explicitly define your schema up front and can just include new fields without any ceremony\nNoSQL typically favours a denormalised schema due to no support for JOINs per the RDBMS world. So you would usually have a flattened, denormalized representation of your data.\nUsing NoSQL doesn't mean you could lose data. Different DBs have different strategies. e.g. MongoDB - you can essentially choose what level to trade off performance vs potential for data loss - best performance = greater scope for data loss.\nIt's often very easy to scale out NoSQL solutions. Adding more nodes to replicate data to is one way to a) offer more scalability and b) offer more protection against data loss if one node goes down. But again, depends on the NoSQL DB/configuration. NoSQL does not necessarily mean \"data loss\" like you infer.\nIMHO, complex/dynamic queries/reporting are best served from an RDBMS. Often the query functionality for a NoSQL DB is limited.\nIt doesn't have to be a 1 or the other choice. My experience has been using RDBMS in conjunction with NoSQL for certain use cases.\nNoSQL DBs often lack the ability to perform atomic operations across multiple \"tables\"."
+        },
+        {
+          "q":"When should I use a NoSQL database instead of a relational database?",
+          "a":"Relational databases enforces ACID. So, you will have schema based transaction oriented data stores. It's proven and suitable for 99% of the real world applications. You can practically do anything with relational databases.\nBut, there are limitations on speed and scaling when it comes to massive high availability data stores. For example, Google and Amazon have terabytes of data stored in big data centers. Querying and inserting is not performant in these scenarios because of the blocking/schema/transaction nature of the RDBMs. That's the reason they have implemented their own databases (actually, key-value stores) for massive performance gain and scalability.\nIf you need a NoSQL db you usually know about it, possible reasons are:\nclient wants 99.999% availability on a high traffic site.\nyour data makes no sense in SQL, you find yourself doing multiple JOIN queries for accessing some piece of information.\nyou are breaking the relational model, you have CLOBs that store denormalized data and you generate external indexes to search that data."
+        },
+        {
+          "q":"What does Document-oriented vs. Key-Value mean in context of NoSQL?",
+          "a":"A key-value store provides the simplest possible data model and is exactly what the name suggests: it's a storage system that stores values indexed by a key. You're limited to query by key and the values are opaque, the store doesn't know anything about them. This allows very fast read and write operations (a simple disk access) and I see this model as a kind of non volatile cache (i.e. well suited if you need fast accesses by key to long-lived data).\nA document-oriented database extends the previous model and values are stored in a structured format (a document, hence the name) that the database can understand. For example, a document could be a blog post and the comments and the tags stored in a denormalized way. Since the data are transparent, the store can do more work (like indexing fields of the document) and you're not limited to query by key. As I hinted, such databases allows to fetch an entire page's data with a single query and are well suited for content oriented applications (which is why big sites like Facebook or Amazon like them).\nOther kinds of NoSQL databases include column-oriented stores, graph databases and even object databases."
+        }
+      ]
+    },
+    {
+      "sub_category_name":"Reactive Systems",
+      "junior_level":[
+        {
+          "q":"What is Scalability of the Reactive System?",
+          "a":"Scalability is the ability of a system to make use of more computing resources in order to increase its performance is measured by the ratio of throughput gain to resource increase. A perfectly scalable system is characterized by both numbers being proportional: a twofold allocation of resources will double the throughput. Scalability is typically limited by the introduction of bottlenecks or synchronization points within the system, leading to constrained scalability, see Amdahl’s Law and Gunther’s Universal Scalability Model."
+        },
+        {
+          "q":"What Does Asynchrony Mean in the Context of Reactive Systems?",
+          "a":"The Oxford Dictionary defines asynchronous as “not existing or occurring at the same time”. In the context of Reactive Sysytems, it means that the processing of a request occurs at an arbitrary point in time, sometime after it has been transmitted from client to service. The client cannot directly observe, or synchronize with, the execution that occurs within the service. This is the antonym of synchronous processing which implies that the client only resumes its own execution once the service has processed the request."
+        },
+        {
+          "q":"What is Actor Model?",
+          "a":"All Actor model says that your concurrency primitives are actors, which can:\nreceive a message and decide what to do next depending on the content of the message, including:\nsend messages to any actors they know about\ncreate new actors\nand provides certain guarantees, e.g.:\nany actor will only handle a single message at a time\nmessages sent by actor X to actor Y will arrive in the order thay were sent"
+        }
+      ]
+    },
+    {
+      "sub_category_name":"SOA",
+      "junior_level":[
+        {
+          "q":"Define what is SOA",
+          "a":"A Service Oriented Architecture (SOA) is basically defined as an architectural pattern consisting of services. Here application components provide services to the other components using communication protocol over the network. This communication involves data exchanging or some coordination activity between services.\nSome of the key principles on which SOA is based are mentioned below\nThe service contract should be standardized containing all the description of the services.\nThere is loose coupling defining the less dependency between the web services and the client.\nIt should follow Service Abstraction rule, which says the service should not expose the way functionality has been executed to the client application.\nServices should be reusable in order to work with various application types.\nServices should be stateless having the feature of discoverability.\nServices break big problems into little problems and allow diverse subscribers to use the services."
+        },
+        {
+          "q":"What is WSDL?",
+          "a":"WSDL stands for Web Service Description Language. WSDL is an XML based document that provides technical details about the web service. Some of the useful information in WSDL document are:\nmethod name,\nport types,\nservice end point,\nbinding,\nmethod parameters etc."
+        },
+        {
+          "q":"What is SOAP?",
+          "a":"SOAP stands for Simple Object Access Protocol. SOAP is an XML based industry standard protocol for designing and developing web services. Since it’s XML based, it’s platform and language independent. So our server can be based on JAVA and client can be on .NET, PHP etc. and vice versa."
+        },
+        {
+          "q":"What is the difference between Monolithic, SOA and Microservices Architecture?",
+          "a":"Monolithic Architecture is similar to a big container wherein all the software components of an application are assembled together and tightly packaged.\nA Service-Oriented Architecture is a collection of services which communicate with each other. The communication can involve either simple data passing or it could involve two or more services coordinating some activity.\nMicroservice Architecture is an architectural style that structures an application as a collection of small autonomous services, modeled around a business domain."
+        },
+        {
+          "q":"Explain WSDL?",
+          "a":"WSDL stands for Web service Description Language. It is a simple XML document which comes under the Service Description layer of Web Service Protocol Stock and describes the technical details or locates the user interface to web service. Few of the important information present in WSDL document are\nMethod name\nPort types\nService end point\nMethod parameters\nHeader information\nOrigin, etc"
+        },
+        {
+          "q":"What are advantages of SOAP Web Services?",
+          "a":"SOAP web services have all the advantages that web services has, some of the additional advantages are:\nWSDL document provides contract and technical details of the web services for client applications without exposing the underlying implementation technologies.\nSOAP uses XML data for payload as well as contract, so it can be easily read by any technology.\nSOAP protocol is universally accepted, so it's an industry standard approach with many easily available open source implementations."
+        },
+        {
+          "q":"What are disadvantages of SOAP Web Services?",
+          "a":"Some of the disadvantages of SOAP protocol are:\nOnly XML can be used, JSON and other lightweight formats are not supported.\nSOAP is based on the contract, so there is a tight coupling between client and server applications.\nSOAP is slow because payload is large for a simple string message, since it uses XML format.\nAnytime there is change in the server side contract, client stub classes need to be generated again. Can’t be tested easily in browser"
+        }
+      ]
+    },
+    {
+      "sub_category_name":"Software Architecture",
+      "junior_level":[
+        {
+          "q":"What Is Load Balancing?",
+          "a":"Load balancing is simple technique for distributing workloads across multiple machines or clusters. The most common and simple load balancing algorithm is Round Robin. In this type of load balancing the request is divided in circular order ensuring all machines get equal number of requests and no single machine is overloaded or underloaded.\nThe Purpose of load balancing is to\nOptimize resource usage (avoid overload and under-load of any machines)\nAchieve Maximum Throughput\nMinimize response time\nMost common load balancing techniques in web based applications are\nRound robin\nSession affinity or sticky session\nIP Address affinity"
+        },
+        {
+          "q":"What Is CAP Theorem?",
+          "a":"The CAP Theorem for distributed computing was published by Eric Brewer. This states that it is not possible for a distributed computer system to simultaneously provide all three of the following guarantees:\nConsistency (all nodes see the same data even at the same time with concurrent updates )\nAvailability (a guarantee that every request receives a response about whether it was successful or failed)\nPartition tolerance (the system continues to operate despite arbitrary message loss or failure of part of the system)\nThe CAP acronym corresponds to these three guarantees. This theorem has created the base for modern distributed computing approaches. Worlds most high volume traffic companies (e.g. Amazon, Google, Facebook) use this as basis for deciding their application architecture. It's important to understand that only two of these three conditions can be guaranteed to be met by a system."
+        },
+        {
+          "q":"Define Microservice Architecture",
+          "a":"Microservices, aka Microservice Architecture, is an architectural style that structures an application as a collection of small autonomous services, modeled around a business domain."
+        },
+        {
+          "q":"Why use WebSocket over Http?",
+          "a":"A WebSocket is a continuous connection between client and server. That continuous connection allows the following:\nData can be sent from server to client at any time, without the client even requesting it. This is often called server-push and is very valuable for applications where the client needs to know fairly quickly when something happens on the server (like a new chat messages has been received or a new price has been udpated). A client cannot be pushed data over http. The client would have to regularly poll by making an http request every few seconds in order to get timely new data. Client polling is not efficient.\nData can be sent either way very efficiently. Because the connection is already established and a webSocket data frame is very efficiently organized, one can send data a lot more efficiently that via an HTTP request that necessarily contains headers, cookies, etc..."
+        },
+        {
+          "q":"What do you mean by lower latency interaction?",
+          "a":"Low latency means that there is very little delay between the time you request something and the time you get a response. As it applies to webSockets, it just means that data can be sent quicker (particularly over slow links) because the connection has already been established so no extra packet roundtrips are required to establish the TCP connection."
+        },
+        {
+          "q":"What Is Scalability?",
+          "a":"Scalability is the ability of a system, network, or process to handle a growing amount of load by adding more resources. The adding of resource can be done in two ways\nScaling Up\nThis involves adding more resources to the existing nodes. For example, adding more RAM, Storage or processing power.\nScaling Out\nThis involves adding more nodes to support more users.\nAny of the approaches can be used for scaling up/out a application, however the cost of adding resources (per user) may change as the volume increases. If we add resources to the system It should increase the ability of application to take more load in a proportional manner of added resources.\nAn ideal application should be able to serve high level of load in less resources. However, in practical, linearly scalable system may be the best option achievable. Poorly designed applications may have really high cost on scaling up/out since it will require more resources/user as the load increases."
+        },
+        {
+          "q":"Why Do You Need Clustering?",
+          "a":"Clustering is needed for achieving high availability for a server software. The main purpose of clustering is to achieve 100% availability or a zero down time in service. A typical server software can be running on one computer machine and it can serve as long as there is no hardware failure or some other failure. By creating a cluster of more than one machine, we can reduce the chances of our service going un-available in case one of the machine fails.\nDoing clustering does not always guarantee that service will be 100% available since there can still be a chance that all the machine in a cluster fail at the same time. However it in not very likely in case you have many machines and they are located at different location or supported by their own resources."
+        },
+        {
+          "q":"What Is A Cluster?",
+          "a":"A cluster is group of computer machines that can individually run a software. Clusters are typically utilized to achieve high availability for a server software. Clustering is used in many types of servers for high availability.\nApp Server Cluster\nAn app server cluster is group of machines that can run a application server that can be reliably utilized with a minimum of down-time.\nDatabase Server Cluster\nAn database server cluster is group of machines that can run a database server that can be reliably utilized with a minimum of down-time."
+        },
+        {
+          "q":"What is Domain Driven Design?",
+          "a":"Domain Driven Design is a methodology and process prescription for the development of complex systems whose focus is mapping activities, tasks, events, and data within a problem domain into the technology artifacts of a solution domain.\nIt is all about trying to make your software a model of a real-world system or process."
+        },
+        {
+          "q":"What defines a software architect?",
+          "a":"An architect is the captain of the ship, making the decisions that cross multiple areas of concern (navigation, engineering, and so on), taking final responsibility for the overall health of the ship and its crew (project and its members), able to step into any station to perform those duties as the need arises (write code for any part of the project should they lose a member). He has to be familiar with the problem domain, the technology involved, and keep an eye out on new technologies that might make the project easier or answer new customers' feature requests."
+        },
+        {
+          "q":"What is meant by the KISS principle?",
+          "a":"KISS, a backronym for \"keep it simple, stupid\", is a design principle noted by the U.S. Navy in 1960. The KISS principle states that most systems work best if they are kept simple rather than made complicated; therefore simplicity should be a key goal in design, and that unnecessary complexity should be avoided."
+        },
+        {
+          "q":"Why is it a good idea for “lower” application layers not to be aware of “higher” ones?",
+          "a":"The fundamental motivation is this:\nYou want to be able to rip an entire layer out and substitute a completely different (rewritten) one, and NOBODY SHOULD (BE ABLE TO) NOTICE THE DIFFERENCE.\nThe most obvious example is ripping the bottom layer out and substituting a different one. This is what you do when you develop the upper layer(s) against a simulation of the hardware, and then substitute in the real hardware.\nAlso layers, modules, indeed architecture itself, are means of making computer programs easier to understand by humans."
+        },
+        {
+          "q":"What does the expression “Fail Early” mean, and when would you want to do so?",
+          "a":"Essentially, fail fast (a.k.a. fail early) is to code your software such that, when there is a problem, the software fails as soon as and as visibly as possible, rather than trying to proceed in a possibly unstable state.\nFail Fast approach won’t reduce the overall number of bugs, at least not at first, but it’ll make most defects much easier to find."
+        }
+      ]
+    }
+  ]
+}
